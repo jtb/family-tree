@@ -63,6 +63,11 @@ text, p, div {
   z-index: 20;
 }
 
+.popupcontrols {
+  position: fixed;
+  width: 59%;
+}
+
 #popupclose {
   float: right;
   padding: 10px;
