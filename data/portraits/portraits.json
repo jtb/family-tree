@@ -22,5 +22,13 @@
   {
     "id": "n11",
     "portrait": "RosePortrait.jpg"
+  },
+  {
+    "id": "n28",
+    "portrait": "OscarAlterPortrait.jpg"
+  },
+  {
+    "id": "n29",
+    "portrait": "DoraAlterPortrait.jpg"
   }
 ]
