@@ -21,6 +21,7 @@ text, p, div {
 .link {
   fill: none;
   stroke: #000;
+  stroke-width: "10";
   shape-rendering: crispEdges;
 }
 
