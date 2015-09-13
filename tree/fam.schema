@@ -1,0 +1,95 @@
+{
+  "type": "object",
+  "definitions": {
+    "timeplace": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "year": {
+          "type": "number"
+        },
+        "month": {
+          "type": "number"
+        },
+        "day": {
+          "type": "number"
+        },
+        "location_city": {
+          "type": "string"
+        },
+        "location_state": {
+          "type": "string"
+        },
+        "church": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "year"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "male",
+    "id"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "first",
+        "last"
+      ],
+      "properties": {
+        "first": {
+          "type": "string"
+        },
+        "middle": {
+          "type": "string"
+        },
+        "last": {
+          "type": "string"
+        },
+        "suffix": {
+          "type": "string"
+        },
+        "maiden": {
+          "type": "string"
+        }
+      }
+    },
+    "male": {
+      "type": "boolean"
+    },
+    "occupation": {
+      "type": "string"
+    },
+    "parents_marriage": {
+      "$ref": "#/definitions/timeplace"
+    },
+    "birth": {
+      "$ref": "#/definitions/timeplace"
+    },
+    "death": {
+      "$ref": "#/definitions/timeplace"
+    },
+    "parents": {
+      "type": "array",
+      "items": {
+        "$ref": "#"
+      }
+    },
+    "siblings": {
+      "type": "array",
+      "items": {
+        "$ref": "#"
+      }
+    }
+  }
+}

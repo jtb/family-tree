@@ -1,0 +1,66 @@
+[
+  {
+    "ids": ["n7"],
+    "url": "purpleparrot.jpg",
+    "caption": "Jean Alter Walker in the October 1943 edition of the Purple Parrot, a humor magazine published by students at Northwestern from 1921 to 1950.",
+    "source": "https://archive.org/details/purpleparrot231nort (pg 4)",
+    "date": {
+      "year": 1943,
+      "month":10
+    }
+  },
+  {
+    "ids": ["n7"],
+    "url": "jeanwalkerbride.jpg",
+    "caption": "a",
+    "source": ""
+  },
+  {
+    "ids": ["n12"],
+    "url": "mwalkersr.jpg",
+    "caption": "b",
+    "source": ""
+  },
+  {
+    "ids": ["n24", "n25"],
+    "url": "IraAndSarah.jpg",
+    "caption": "Ira I. Walker and Sarah Jane Haines",
+    "source": "https://familysearch.org/photos/images/9265052"
+  },
+  {
+    "ids": ["n25"],
+    "url": "sarah1.jpg",
+    "caption": "c",
+    "source": ""
+  },
+  {
+    "ids": ["n25"],
+    "url": "sarah2.jpg",
+    "caption": "d",
+    "source": ""
+  },
+  {
+    "ids": ["n24"],
+    "url": "ira1.jpg",
+    "caption": "e",
+    "source": ""
+  },
+  {
+    "ids": ["n24"],
+    "url": "ira2.jpg",
+    "caption": "f",
+    "source": ""
+  },
+  {
+    "ids": ["n10", "n11"],
+    "url": "RoyDirks1.jpg",
+    "caption": "g",
+    "source": ""
+  },
+  {
+    "ids": ["n10", "n11"],
+    "url": "RoyDirks2.jpg",
+    "caption": "h",
+    "source": ""
+  }
+]

@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <title>Justin's Family Tree</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script src="http://d3js.org/queue.v1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script src="js/family_tree.js"></script>
+  <script src="js/family_card.js"></script>
+
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -13,9 +21,72 @@
 </script>
 </head>
 <body>
-  <a target="_blank" href="https://github.com/jtb/family-tree"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"></a>
-<div style="align:center; text-align:center">
-  <h1>Hello World!</h1>
+<svg id="svgtree"></svg>
+<div id="overlay"></div>
+<div id="popup" style="background-image: url(img/background.jpg);">
+  <div class="popupcontrols">
+    <span id="popupclose">
+      <svg width="22" height="22" xmlns="http://www.w3.org/2000/svg" version="1.1">
+	<g>
+	  <path xmlns="http://www.w3.org/2000/svg" d="M12,2C6.5,2,2,6.5,2,12c0,5.5,4.5,10,10,10s10-4.5,10-10C22,6.5,17.5,2,12,2z M16.9,15.5l-1.4,1.4L12,13.4l-3.5,3.5   l-1.4-1.4l3.5-3.5L7.1,8.5l1.4-1.4l3.5,3.5l3.5-3.5l1.4,1.4L13.4,12L16.9,15.5z"/>
+	  <rect class="btn" x="0" y="0" width="22" height="22" onclick="hide()" />
+	</g>
+      </svg>
+    </span>
+  </div>
+  <div class="popupcontent">
+    <div id="titlename"></div>
+    <div class="img-circular" id="portrait"></div>
+    <div id="stats">
+      <div id="birth"></div>
+      <div id="marriage"></div>
+      <div id="death"></div>
+    </div>
+    <div class="cardsection" id="photodiv"></div>
+    <div class="cardsection" id="biodiv"></div>
+  </div>
 </div>
+</div>
+<script>
+var bio, sources, portrait, photo;
+queue()
+  .defer(d3.json, "tree/fam.json")
+  .defer(d3.json, "data/bios/bios.json")
+  .defer(d3.json, "data/portraits/portraits.json")
+  .defer(d3.json, "data/photos/people.json")
+  .await(init)
+
+function init(error, json, bios, portraits, photos) {
+  if (error) throw error;
+  bio = arrayToMap(bios, 'id', 'bio');
+  sources = arrayToMap(bios, 'id', 'sources');
+  portrait = arrayToMap(portraits, 'id', 'portrait');
+  photo = arrayMultiKeyToMap(photos, 'ids', 'url');
+  // alert(bio['n192']);
+  buildTree(json);
+}
+
+function arrayToMap(arr, key, value) {
+  return arr.reduce(function(map, obj) {
+    map[obj[key]] = obj[value];
+    return map;
+  }, {});
+}
+
+function arrayMultiKeyToMap(arr, keys, value) {
+  return arr.reduce(function(map, obj) {
+    var index;
+    var key_array = obj[keys];
+    for (index = 0; index < key_array.length; ++index) {
+        var key = key_array[index];
+        if (!(key in map)) {
+            map[key] = [];
+        }
+        map[key].push(obj[value]);
+    }
+    return map;
+  }, {});
+}
+</script>
 </body>
 </html>
