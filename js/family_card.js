@@ -81,26 +81,35 @@ function addPhotos(d) {
       .attr('class', 'title')
       .text("Photos");
 
-    var a = d3.select("#photodiv")
-      .append('div')
-      .attr('class', 'content')
-      .attr("id", "scroll")
-      .selectAll('a')
-      .data(photodata);
+    var div = d3.select("#photodiv")
+	.append('div')
+        .attr('class', 'content')
+        .attr("id", "scroll")
+        .selectAll('div')
+        .data(photodata);
 
-    a.enter()
-      .append('a')
-      .attr("href", function(d) {
-        return "data/photos/" + d;
-      })
-      .attr("target", "_blank");
+    div.enter().append('div')
+        .attr('class', 'picture');
+
+    var a = div.append('a')
+        .on("click", function() { d3.event.preventDefault(); return hs.expand(this); })
+	.attr("href", function(d) {
+		return "data/photos/" + d.url;
+	    })
+	.attr('rel', "highslide")
+	.attr('class', "highslide");
 
     var img = a.append('img')
+      .attr("alt", "")
       .attr("src", function(d) {
-        return "data/photos/" + d;
+        return "data/photos/" + d.url;
       });
 
-    a.exit().remove();
+    var caption = div.append('div')
+      .attr('class', 'highslide-caption')
+      .text(function(d) { return d.caption; });
+
+    div.exit().remove();
   }
 }
 

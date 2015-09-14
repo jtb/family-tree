@@ -1,96 +1,110 @@
-[
-  {
-    "ids": ["n7"],
+[{
+  "ids": ["n7"],
+  "content": {
     "url": "purpleparrot.jpg",
     "caption": "Jean Alter Walker in the October 1943 edition of the Purple Parrot, a humor magazine published by students at Northwestern from 1921 to 1950.",
     "source": "https://archive.org/details/purpleparrot231nort (pg 4)",
     "date": {
       "year": 1943,
-      "month":10
+      "month": 10
     }
-  },
-  {
-    "ids": ["n7"],
+  }
+}, {
+  "ids": ["n7"],
+  "content": {
     "url": "jeanwalkerbride.jpg",
     "caption": "a",
     "source": ""
-  },
-  {
-    "ids": ["n12"],
+  }
+}, {
+  "ids": ["n12"],
+  "content": {
     "url": "mwalkersr.jpg",
     "caption": "b",
     "source": ""
-  },
-  {
-    "ids": ["n24", "n25"],
+  }
+}, {
+  "ids": ["n24", "n25"],
+  "content": {
     "url": "IraAndSarah.jpg",
     "caption": "Ira I. Walker and Sarah Jane Haines",
     "source": "https://familysearch.org/photos/images/9265052"
-  },
-  {
-    "ids": ["n25"],
+  }
+}, {
+  "ids": ["n25"],
+  "content": {
     "url": "sarah1.jpg",
     "caption": "c",
     "source": ""
-  },
-  {
-    "ids": ["n25"],
+  }
+}, {
+  "ids": ["n25"],
+  "content": {
     "url": "sarah2.jpg",
     "caption": "d",
     "source": ""
-  },
-  {
-    "ids": ["n24"],
+  }
+}, {
+  "ids": ["n24"],
+  "content": {
     "url": "ira1.jpg",
     "caption": "e",
     "source": ""
-  },
-  {
-    "ids": ["n24"],
+  }
+}, {
+  "ids": ["n24"],
+  "content": {
     "url": "ira2.jpg",
     "caption": "f",
     "source": ""
-  },
-  {
-    "ids": ["n10", "n11"],
+  }
+}, {
+  "ids": ["n10", "n11"],
+  "content": {
     "url": "RoyDirks1.jpg",
     "caption": "g",
     "source": ""
-  },
-  {
-    "ids": ["n10", "n11"],
+  }
+}, {
+  "ids": ["n10", "n11"],
+  "content": {
     "url": "RoyDirks2.jpg",
     "caption": "h",
     "source": ""
-  },
-  {
-    "ids": ["n28", "n29"],
+  }
+}, {
+  "ids": ["n28", "n29"],
+  "content": {
     "url": "DoraAndOscarAlter.jpg",
     "caption": "Dora and Oscar Alter",
     "source": "http://www.jemgen.com"
-  },
-  {
-    "ids": ["n28", "n29"],
+  }
+}, {
+  "ids": ["n28", "n29"],
+  "content": {
     "url": "DoraAndOscar2.jpg",
     "caption": "John Ornes and family about 1884. John Ornes, Anna Beer-Ornes, Minnie Kaiser in front, Dora Beer-Alter and Oscar Alter in rear. Probably taken on occasion of Julia Beer's death, which followed Anna and Dora's marriages by a few weeks.",
     "source": "http://www.jemgen.com"
-  },
-  {
-    "ids": ["n28"],
+  }
+}, {
+  "ids": ["n28"],
+  "content": {
     "url": "Oscar_Alter_Drug_Store.jpg",
     "caption": "ca. 1910, Manitowoc, Wisconsin.  Oscar A. Alter Drug Store, 208 North Eighth Street, around 1910. Mr. Alter worked as a druggist from 1880 into the early 1900's, then became an employee of the East Wisconsin Trustee Company into the 1930's.",
     "source": "http://www.jemgen.com"
-  },
-  {
-    "ids": ["n29"],
+  }
+}, {
+  "ids": ["n29"],
+  "content": {
     "url": "AnnaAndDoraBeer.jpg",
     "caption": "Taken in 1864 on the occasion of their father's death at age 43. Anna, on the left, is 7, and Dora is 4. They look like they've been crying.",
     "source": "http://www.jemgen.com"
-  },
-  {
-    "ids": ["n29"],
+  }
+}, {
+  "ids": ["n29"],
+  "content": {
     "url": "DoraAndAnnaBeer.jpg",
     "caption": "Dora and Anna Beer",
     "source": "http://www.jemgen.com"
   }
-]
+}]
