@@ -1204,19 +1204,30 @@
                 "location_city": "New Port",
                 "location_state": "Kentucky"
               },
+              "parents_marriage": {
+                "year": 1884
+              },
               "parents": [
                 {
                   "id": "n26",
                   "name": {
-                    "first": "D.Edwin",
+                    "first": "Daniel",
+                    "middle": "Edwin",
                     "last": "Smith"
                   },
-                  "male": true
+                  "male": true,
+                  "birth": {
+                    "year": 1858,
+                    "month": 10,
+                    "day": 28,
+                    "location_city": "Grants Lick",
+                    "location_state": "Kentucky"
+                  }
                 },
                 {
                   "id": "n27",
                   "name": {
-                    "first": "Marg.",
+                    "first": "Margaret",
                     "last": "Kratzmeier"
                   },
                   "male": false
