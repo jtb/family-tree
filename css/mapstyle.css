@@ -1,0 +1,36 @@
+.state { fill: #333; }
+
+/*
+
+.state.subunit.Illinois { fill: #cdc; }
+.state.subunit.Missouri { fill: #ddc; }
+.state.subunit.Kentucky { fill: #cdd; }
+.state.subunit.Indiana { fill: #dcd; }
+.state.subunit.Tennessee { fill: #dcc; }
+.state.subunit.Ohio { fill: #ccc; }
+.state.subunit.North.Carolina { fill: #ecd; }
+.state.subunit.Virginia { fill: #ddb; }
+.state.subunit.Pennsylvania { fill: #eeb; }
+.state.subunit.Maryland { fill: #cde; }
+.state.subunit.New.Jersey { fill: #edb; }
+.state.subunit.West.Virginia { fill: #bca; }
+.state.subunit.Wisconsin { fill: #cba; }
+.state.subunit.Nebraska { fill: #abc; }
+
+*/
+
+.boundary-interior {
+  fill: none;
+  stroke: #777;
+}
+
+.journey {
+  fill: none;
+  /* stroke: #F22; */
+}
+
+.yeardiv {
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="css/mapstyle.css" rel="stylesheet" type="text/css"> 
+  <script src="http://d3js.org/queue.v1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+</head>
+<body>
+<button onclick="update()">Re-run</button>
+
+<script>
+
+var width = 1325,
+  height = 600;
+
+var div = d3.select("body").append("div").attr("class", "yeardiv");
+
+
+var svg = d3.select("body").append("svg")
+  .attr("width", width)
+  .attr("height", height);
+
+var duration = 30000;
+var path, routes, birthPlaces, minDate, maxDate, totalDate;
+
+queue()
+  .defer(d3.json, "tree/fam.json")
+  .defer(d3.json, "map/usa_europe.json")
+  .await(init)
+
+function init(error, json, usa) {
+  if (error) throw error;
+
+  var subunits = topojson.feature(usa, usa.objects.subunits3);
+  var subunitsEU = topojson.feature(usa, usa.objects.subunitsEU);
+
+  var projection = d3.geo.mercator()
+    .center([0, 37.2])
+    .rotate([93.3, 0])
+    .scale(500)
+    .translate([width / 4, height /2 + 70]);
+
+  path = d3.geo.path()
+    .projection(projection);
+
+  svg.selectAll(".subunit")
+    .data(subunits.features)
+    .enter().append("path")
+    .attr("class", function(d) {
+      return "state subunit " + d.id;
+    })
+    .attr("d", path);
+
+  svg.append("path")
+    .datum(topojson.mesh(usa, usa.objects.subunits3, function(a, b) {
+      return a !== b;
+    }))
+    .attr("d", path)
+    .attr("class", "boundary-interior");
+
+  svg.selectAll(".subunitEU")
+    .data(subunitsEU.features)
+    .enter().append("path")
+    .attr("class", function(d) {
+      return "state subunit " + d.id;
+    })
+    .attr("d", path);
+
+  svg.append("path")
+    .datum(topojson.mesh(usa, usa.objects.subunitsEU, function(a, b) {
+      return a !== b;
+    }))
+    .attr("d", path)
+    .attr("class", "boundary-interior");
+
+  var tree = d3.layout.tree()
+    .children(function(d) {
+      return d.parents;
+    });
+
+  var nodes = tree.nodes(json);
+
+  routes = nodes.map(createLink).filter(removeInvalid);
+  birthPlaces = nodes.map(getBirthPlaces).filter(removeInvalid);
+
+  minDate = d3.min(routes, function(d) {
+    return d[2];
+  });
+  maxDate = d3.max(routes, function(d) {
+    return d[3];
+  });
+  totalDate = maxDate - minDate;
+
+  update();
+}
+
+
+function update() {
+  svg.selectAll(".journey").remove();
+  svg.selectAll("circle").remove();
+
+  var route = svg.selectAll(".journey")
+    .data(routes);
+
+  route.enter().append("path")
+    .attr("d", function(d) {
+      return path({
+        type: "LineString",
+        coordinates: [d[0], d[1]]
+      });
+    })
+    .attr("class", "journey");
+
+  div.text(minDate)
+    .transition()
+    .duration(duration)
+    .ease("linear")
+    .tween("text", function() {
+      var a = minDate;
+      var b = maxDate;
+      return function(t) {
+        this.textContent = Math.floor(a * (1 - t) + b * t);
+      };
+    });
+
+  route.each(function(d) {
+      d.totalLength = this.getTotalLength();
+    })
+    .attr("stroke-dasharray", function(d) {
+      return d.totalLength + "," + d.totalLength;
+    })
+    .attr("stroke-dashoffset", function(d) {
+      return d.totalLength;
+    })
+    .attr("stroke-opacity", 1)
+    .attr("stroke-width", 8)
+    .attr("stroke", "red")
+    .transition()
+    .duration(function(d) {
+      return duration * (d[3] - d[2]) / totalDate;
+    })
+    .delay(function(d) {
+      return duration * (d[2] - minDate) / totalDate;
+    })
+    .ease("linear")
+    .attr("stroke-dashoffset", 0)
+    .attr("stroke-opacity", 0.7)
+    .attr("stroke-width", 4)
+    .attr("stroke", "orange");
+
+
+  route.exit().remove();
+
+  var circle = svg.selectAll("circle")
+    .data(birthPlaces);
+
+  circle.exit().remove();
+
+  circle.enter().append("circle")
+    .attr("r", 0)
+    .transition()
+    .delay(function(d) {
+      return duration * (d[1] - minDate) / totalDate;
+    })
+    .attr("r", 3.5)
+    .style("fill", "red");
+
+  circle
+    .attr("transform", function(d) {
+      return "translate(" + path.centroid({
+        type: "Point",
+        coordinates: d[0]
+      }) + ")";
+    })
+
+  colorState("Illinois", "#cdc");
+  colorState("Missouri", "#ddc");
+  colorState("Kentucky", "#cdd");
+  colorState("Indiana", "#dcd");
+  colorState("Tennessee", "#dcc");
+  colorState("Ohio", "#ccc");
+  colorState("North.Carolina", "#ecd");
+  colorState("Virginia", "#ddb");
+  colorState("Pennsylvania", "#eeb");
+  colorState("Maryland", "#cde");
+  colorState("New.Jersey", "#edb");
+  colorState("West.Virginia", "#bca");
+  colorState("Wisconsin", "#cba");
+  colorState("Nebraska", "#abc");
+  colorState("England", "#ecd");
+  colorState("Germany", "#ddc");
+}
+
+function colorState(state, color) {
+  var country = state;
+  if (state === "England") country = "United.Kingdom";
+  svg.selectAll(".state.subunit." + country)
+    .transition().delay(0)
+    .style("fill", "#333")
+    .transition()
+    .delay(function(d) {
+      return duration * (d3.min(birthPlaces.filter(function(o) {
+        return state === o[2].replace(/ /g, ".");
+      }), function(o) {
+        return o[1];
+      }) - minDate) / totalDate;
+    })
+    .style("fill", color)
+}
+
+function createLink(obj) {
+  if (obj.birth && obj.birth.year && obj.birth.lat) {
+    var trueLink = false;
+    var source = [-obj.birth.lon, obj.birth.lat];
+    var ans = [source];
+    var parent = obj.parent;
+    while (parent) {
+      if (parent.birth && parent.birth.year && parent.birth.lat) {
+        ans.push([-parent.birth.lon, parent.birth.lat])
+        ans.push(obj.birth.year);
+        ans.push(parent.birth.year);
+        trueLink = true;
+        break;
+      }
+      parent = parent.parent;
+    }
+    if (trueLink) return ans;
+  }
+}
+
+function getBirthPlaces(obj) {
+  if (obj.birth && obj.birth.year && obj.birth.lat) {
+    var source = [-obj.birth.lon, obj.birth.lat];
+    var ans = [source];
+    var parent = obj.parent;
+    ans.push(obj.birth.year);
+    ans.push(obj.birth.location_state)
+    return ans;
+  }
+}
+
+function removeInvalid(obj) {
+  return (typeof obj !== 'undefined');
+}
+
+</script>
+</body>
+</html>
