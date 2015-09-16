@@ -1476,8 +1476,11 @@
         "male": true,
         "birth": {
           "year": 1886,
-          "lat": 40.3900,
-          "lon": 95.8500,
+          "month": 6,
+          "day": 14,
+          "lat": 40.411250,
+          "lon": 95.998665,
+          "location_city": "Johnson, Nemaha County",
           "location_state": "Nebraska"
         },
         "death": {
@@ -1495,16 +1498,19 @@
           },
           "male": true,
           "birth": {
-            "year": 1851,
-            "lat": 52.5167,
-            "lon": -13.3833,
-            "location_state": "Germany"
+            "year": 1852,
+            "month": 2,
+            "day": 11,
+            "lat": 39.6983,
+            "lon": 89.6197,
+            "location_city": "Springfield",
+            "location_state": "Illinois"
           },
           "death": {
             "year": 1923,
             "month": 4,
             "day": 13,
-            "location_city": "Hobart",
+            "location_city": "Hobart, Kiowa County",
             "location_state": "Oklahoma"
           },
           "parents": [{
@@ -1589,14 +1595,19 @@
           "id": "n21",
           "name": {
             "first": "Mary",
+            "middle": "E",
             "maiden": "Rademacher",
             "last": "Dirks"
           },
           "male": false,
           "birth": {
-            "year": 1859,
+            "year": 1858,
             "month": 11,
-            "day": 8
+            "day": 4,
+            "lat": 39.6983,
+            "lon": 89.6197,
+            "location_city": "Springfield",
+            "location_state": "Illinois"
           },
           "death": {
             "year": 1942,
@@ -1663,13 +1674,65 @@
         },
         "male": false,
         "birth": {
-          "year": 1886
+          "year": 1888,
+          "month": 1,
+          "day": 4,
+          "lat": 40.411250,
+          "lon": 95.998665,
+          "location_city": "Johnson, Nemaha County",
+          "location_state": "Nebraska"
         },
         "death": {
           "year": 1963,
           "month": 12,
           "day": 6
-        }
+        },
+        "parents": [{
+          "id": "n22",
+          "name": {
+            "first": "John",
+            "middle": "H.",
+            "last": "Pohlman"
+          },
+          "male": true,
+          "birth": {
+            "year": 1839,
+            "month": 8,
+            "day": 25,
+            "lat": 52.5167,
+            "lon": -13.3833,
+            "location_state": "Germany"
+          },
+          "death": {
+            "year": 1911,
+            "month": 9,
+            "day": 19,
+            "location_city": "Nemaha County",
+            "location_state": "Nebraska"
+          }
+        }, {
+          "id": "n23",
+          "name": {
+            "first": "Elizabeth",
+            "middle": "J.",
+            "last": "Pohlman"
+          },
+          "male": false,
+          "birth": {
+            "year": 1845,
+            "month": 11,
+            "day": 4,
+            "lat": 40.0000,
+            "lon": 89.0000,
+            "location_state": "Illinois"
+          },
+          "death": {
+            "year": 1921,
+            "month": 7,
+            "location_city": "Nemaha County",
+            "location_state": "Nebraska"
+          }
+        }]
       }]
     }]
   }]

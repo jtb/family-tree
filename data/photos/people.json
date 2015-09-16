@@ -100,11 +100,29 @@
     "caption": "Taken in 1864 on the occasion of their father's death at age 43. Anna, on the left, is 7, and Dora is 4. They look like they've been crying.",
     "source": "http://www.jemgen.com"
   }
-}, {
+},
+{
   "ids": ["n29"],
   "content": {
     "url": "DoraAndAnnaBeer.jpg",
     "caption": "Dora and Anna Beer",
     "source": "http://www.jemgen.com"
   }
-}]
+},
+{
+  "ids": ["n22"],
+  "content": {
+    "url": "JohnPohlman.jpg",
+    "caption": "From the photo collection of Maude (Leiser) Geddes.",
+    "source": "http://www.findagrave.com/cgi-bin/fg.cgi?page=pv&GRid=70808129&PIpi=124805235"
+  }
+},
+{
+  "ids": ["n23"],
+  "content": {
+    "url": "ElizabethPohlman.jpg",
+    "caption": "From the photo collection of Maude (Leiser) Geddes.",
+    "source": "http://www.findagrave.com/cgi-bin/fg.cgi?page=pv&GRid=70808320&PIpi=125309674"
+  }
+}
+]
