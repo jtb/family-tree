@@ -1230,6 +1230,12 @@
         "maiden": "Alter"
       },
       "male": false,
+      "birth": {
+        "year": 1922,
+        "lat": 44.5000,
+        "lon": 89.5000,
+        "location_state": "Wisconsin"
+      },
       "parents": [{
         "id": "n14",
         "name": {
@@ -1392,7 +1398,13 @@
             "first": "Katharine",
             "last": "Van Nostrand"
           },
-          "male": false
+          "male": false,
+          "birth": {
+            "year": 1855,
+            "lat": 44.5000,
+            "lon": 89.5000,
+            "location_state": "Wisconsin"
+          }
         }]
       }]
     }],
