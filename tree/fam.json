@@ -1011,6 +1011,11 @@
               "location_city": "Bloomfield",
               "location_state": "Indiana"
             },
+            "parents_marriage": {
+              "year": 1840,
+              "month": 2,
+              "day": 18
+            },
             "parents": [{
               "id": "n102",
               "name": {
@@ -1036,16 +1041,18 @@
               "parents": [{
                 "id": "n204",
                 "name": {
-                  "first": "Frederick",
+                  "first": "Fredrick",
                   "last": "Neldon"
                 },
                 "male": true,
                 "birth": {
                   "year": 1781,
                   "month": 1,
-                  "lat": 41.0000,
-                  "lon": 77.5000,
-                  "location_state": "Pennsylvania"
+                  "day": 1,
+                  "lat": 40.2900,
+                  "lon": 74.1500,
+                  "location_city": "Monmouth",
+                  "location_state": "New Jersey"
                 },
                 "death": {
                   "year": 1863,
@@ -1115,11 +1122,12 @@
               },
               "male": false,
               "birth": {
-                "year": 1823,
-                "lat": 40.4700,
-                "lon": 79.9800,
-                "location_city": "Allegheny",
-                "location_state": "Pennsylvania"
+                "year": 1829,
+                "month": 5,
+                "lat": 40.3800,
+                "lon": 80.7600,
+                "location_city": "Jefferson County",
+                "location_state": "Ohio"
               },
               "death": {
                 "year": 1897,
@@ -1502,10 +1510,16 @@
           "location_city": "Auburn",
           "location_state": "Nebraska"
         },
+        "parents_marriage": {
+          "year": 1878,
+          "month": 3,
+          "day": 7
+        },
         "parents": [{
           "id": "n20",
           "name": {
             "first": "Henry",
+            "middle": "E",
             "last": "Dirks"
           },
           "male": true,
@@ -1529,7 +1543,7 @@
             "id": "n40",
             "name": {
               "first": "Johann",
-              "last": "Dirks"
+              "last": "Dierks"
             },
             "male": true,
             "birth": {
@@ -1554,11 +1568,13 @@
               "first": "Hilka",
               "middle": "Maria",
               "maiden": "Remmers",
-              "last": "Dirks"
+              "last": "Dierks"
             },
             "male": false,
             "birth": {
               "year": 1822,
+              "month": 7,
+              "day": 16,
               "lat": 52.7561,
               "lon": -9.3931,
               "location_city": "Niedersachsen",
