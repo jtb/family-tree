@@ -1462,7 +1462,7 @@
       "id": "n4",
       "name": {
         "first": "William",
-        "middle": "Charles",
+        "middle": "Clyde",
         "last": "Brown"
       },
       "male": true
@@ -1491,6 +1491,7 @@
         "id": "n10",
         "name": {
           "first": "Roy",
+          "middle": "William",
           "last": "Dirks"
         },
         "male": true,
@@ -1697,6 +1698,7 @@
         "id": "n11",
         "name": {
           "first": "Rose",
+          "middle": "Crawford",
           "maiden": "Pohlman",
           "last": "Dirks"
         },
