@@ -99,7 +99,9 @@ rect.btn {
 }
 
 #scroll {
-  width:auto;
+  width:90%;
+  margin: 10px 10px 10px 10px;
+  float:left;
   height:160px;
 /*  margin:100px auto;*/
   background:#F0E0B2;
@@ -110,13 +112,18 @@ rect.btn {
 }
 
 .picture {
-  float: left;
+  display:inline-block;
+  height: 160px;
 }
 
 #scroll img {
   margin:3px 3px 3px 3px;
   margin: auto;
   height:150px;
+}
+
+#photodiv {
+  overflow: hidden;
 }
 
 .cardsection .title {
