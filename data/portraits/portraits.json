@@ -34,5 +34,37 @@
   {
     "id": "n22",
     "portrait": "JohnPohlmanPortrait.jpg"
+  },
+  {
+    "id": "n2",
+    "portrait": "BaryPortrait.jpg"
+  },
+  {
+    "id": "n3",
+    "portrait": "KathyPortrait.jpg"
+  },
+  {
+    "id": "n6",
+    "portrait": "MertonPortrait.jpg"
+  },
+  {
+    "id": "n4",
+    "portrait": "WilliamCPortrait.jpg"
+  },
+  {
+    "id": "n5",
+    "portrait": "MarjPortrait.jpg"
+  },
+  {
+    "id": "n8",
+    "portrait": "CharlesEBrownPortrait.jpg"
+  },
+  {
+    "id": "n16",
+    "portrait": "WilliamJPortrait.jpg"
+  },
+  {
+    "id": "n17",
+    "portrait": "MinniePortrait.jpg"
   }
 ]
