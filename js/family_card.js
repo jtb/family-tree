@@ -102,7 +102,7 @@ function addPhotos(d) {
     var img = a.append('img')
       .attr("alt", "")
       .attr("src", function(d) {
-        return "data/photos/" + d.url;
+        return "data/thumbnails/" + d.url;
       });
 
     var caption = div.append('div')
