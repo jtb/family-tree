@@ -64,7 +64,7 @@
           "id": "n6",
           "name": {
             "first": "Merton",
-            "middle": "G.",
+            "middle": "George",
             "last": "Walker",
             "suffix": "Jr."
           },
@@ -74,8 +74,9 @@
             "year": 1922,
             "month": 5,
             "day": 1,
-            "lat": 39.1622,
-            "lon": 86.5292,
+            "lat": 39.7910,
+            "lon": 86.1480,
+            "location_city": "Indianpolis",
             "location_state": "Indiana"
           },
           "death": {
@@ -123,7 +124,7 @@
               "id": "n12",
               "name": {
                 "first": "Merton",
-                "middle": "G.",
+                "middle": "George",
                 "last": "Walker",
                 "suffix": "Sr."
               },
@@ -1713,6 +1714,7 @@
                   "death": {
                     "year": 1943,
                     "month": 1,
+                    "day": 25,
                     "location_city": "Rocky Ford",
                     "location_state": "Colorado"
                   },
@@ -1803,6 +1805,13 @@
             "day": 25,
             "location_city": "Auburn",
             "location_state": "Nebraska"
+          },
+          "death": {
+            "year": 2006,
+            "month": 4,
+            "day": 4,
+            "location_city": "Springfield",
+            "location_state": "Missouri"
           },
           "male": false,
           "siblings": [
