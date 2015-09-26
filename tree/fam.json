@@ -74,8 +74,8 @@
             "year": 1922,
             "month": 5,
             "day": 1,
-            "lat": 39.7910,
-            "lon": 86.1480,
+            "lat": 39.791,
+            "lon": 86.148,
             "location_city": "Indianpolis",
             "location_state": "Indiana"
           },
@@ -1786,8 +1786,100 @@
               "death": {
                 "year": 1967,
                 "month": 4,
-                "day": 19
-              }
+                "day": 19,
+                "location_city": "Auburn",
+                "location_state": "Nebraska"
+              },
+              "parents_marriage": {
+                "year": 1893,
+                "month": 3,
+                "day": 11
+              },
+              "parents": [
+                {
+                  "id": "n18",
+                  "name": {
+                    "first": "William",
+                    "middle": "Henry",
+                    "last": "Paul"
+                  },
+                  "male": true,
+                  "birth": {
+                    "year": 1866,
+                    "month": 8,
+                    "day": 24
+                  },
+                  "death": {
+                    "year": 1945,
+                    "month": 1,
+                    "day": 2,
+                    "location_city": "Ellis",
+                    "location_state": "Kansas"
+                  },
+                  "parents": [
+                    {
+                      "id": "n36",
+                      "name": {
+                        "first": "William",
+                        "middle": "Henry",
+                        "last": "Paul"
+                      },
+                      "male": true,
+                      "birth": {
+                        "location_city": "London",
+                        "location_state": "England"
+                      },
+                      "death": {
+                        "location_city": "Ellis",
+                        "location_state": "Kansas"
+                      }
+                    },
+                    {
+                      "id": "n37",
+                      "name": {
+                        "first": "Hannah",
+                        "last": "Paul",
+                        "maiden": "McQuinlan"
+                      },
+                      "male": false,
+                      "birth": {
+                        "year": 1837,
+                        "month": 1,
+                        "day": 1,
+                        "location_city": "Queenstown",
+                        "location_state": "Ireland"
+                      },
+                      "death": {
+                        "year": 1933
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "n19",
+                  "name": {
+                    "first": "Alice",
+                    "middle": "Mae",
+                    "last": "Paul",
+                    "maiden": "Glick"
+                  },
+                  "male": false,
+                  "birth": {
+                    "year": 1876,
+                    "month": 5,
+                    "day": 30,
+                    "location_city": "Harrisburgh",
+                    "location_state": "Pennsylvania"
+                  },
+                  "death": {
+                    "year": 1954,
+                    "month": 5,
+                    "day": 30,
+                    "location_city": "Ellis",
+                    "location_state": "Kansas"
+                  }
+                }
+              ]
             }
           ]
         },

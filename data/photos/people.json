@@ -238,7 +238,7 @@
   }
 },
 {
-  "ids": ["n4"],
+  "ids": ["n4", "n17"],
   "content": {
     "url": "Bill1.jpg",
     "caption": "William (Age 1). Grandmother Minnie Brown.",
@@ -478,10 +478,10 @@
   }
 },
 {
-  "ids": ["n17"],
+  "ids": ["n35"],
   "content": {
-    "url": "MinniePortrait.jpg",
-    "caption": "Minnie Brown",
+    "url": "MaryADobbinsPortrait.jpg",
+    "caption": "Mother of Minnie Humphrey. William C.'s Great Grandmother.",
     "source": "Family Photos"
   }
 }
