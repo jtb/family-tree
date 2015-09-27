@@ -1,5 +1,5 @@
 #!/bin/bash
-for i in photos/*.jpg
+for i in photos/processed/*.jpg
 do
 echo "Prcoessing image $i ..."
 convert -thumbnail x150 $i thumbnails/$(basename $i)

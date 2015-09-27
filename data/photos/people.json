@@ -492,5 +492,117 @@
     "caption": "Mother of Minnie Humphrey. William C.'s Great Grandmother.",
     "source": "Family Photos"
   }
+},
+{
+  "ids": ["n2", "n4", "n5"],
+  "content": {
+    "url": "BaryAndFamily.jpg",
+    "caption": "1986: William C., Bary, Marjorie, Kevin Brown.",
+    "source": "Family Photos"
+  }
+},
+{
+  "ids": ["n4", "n5"],
+  "content": {
+    "url": "BillAndMarjWW2.jpg",
+    "caption": "Ft. Leavenworth, Kansas. 1942. World War II.",
+    "source": "Family Photos"
+  }
+},
+{
+  "ids": ["n4", "n10"],
+  "content": {
+    "url": "BillArmyInduction.jpg",
+    "caption": "Charles Murphy (Bill's step-dad), Bill, Roy Dirks (Bill's father-in-law). 1942; left next day for army induction.",
+    "source": "Family Photos"
+  }
+},
+{
+  "ids": ["n10", "n11", "n23"],
+  "content": {
+    "url": "Family.jpg",
+    "caption": "Sunday Afternoon gathering of the Pohlmans and Dirks at the Pohlman home place, Johnson. 1917? Back Row: Rose and Roy Dirks, Delia Pohlman, Earl Pohlman, Tom Pohlman, John Pohlman, Lawrence and Alice Dirks. Middle Row: Charlie and Cora Pohlman (daughter?), Kate Pohlman, Homer Pohlman, Grandma Pohlman. Front Row: Helen Belle Dirks, Nellie Pohlman, Roy Pohlman, Floyd Pohlman. Note horse and buggy in background.",
+    "source": "Family Photos"
+  }
+},
+{
+  "ids": ["n10", "n11"],
+  "content": {
+    "url": "HelenBelle.jpg",
+    "caption": "F. Don and Helen Belle Maclay, Sharon, Rose and Roy Dirks. 1942 Neligh, Nebraska.",
+    "source": "Family Photos"
+  }
+},
+{
+  "ids": ["n20"],
+  "content": {
+    "url": "HenryEDirks.jpg",
+    "caption": "Henry E. Dirks",
+    "source": "Family Photos"
+  }
+},
+{
+  "ids": ["n10", "n11"],
+  "content": {
+    "url": "HighSchool.jpg",
+    "caption": "Johnson High School Freshman Class of 1904. Rose Pohlman in white blouse, black collar, first row left. Roy Dirks to her right.",
+    "source": "Family Photos"
+  }
+},
+{
+  "ids": ["n"],
+  "content": {
+    "url": "HonJohnHPohlman.jpg",
+    "caption": "",
+    "source": "Family Photos"
+  }
+},
+{
+  "ids": ["n21"],
+  "content": {
+    "url": "MaryRDirks.jpg",
+    "caption": "Mary Rademacher Dirks",
+    "source": "Family Photos"
+  }
+},
+{
+  "ids": ["n11"],
+  "content": {
+    "url": "RosePDirks.jpg",
+    "caption": "Rose Pohlman Dirks, Homer J. Pohlman, Jennie P. Dirks. 1958. Chatuqua Park, Beatrice, Nebraska.",
+    "source": "Family Photos"
+  }
+},
+{
+  "ids": ["n11"],
+  "content": {
+    "url": "RosePohlman.jpg",
+    "caption": "Back Row: Lydia Dirks and Rose Pohlman. Front Row: Jennie Pohlman and ?. Circa 1904",
+    "source": "Family Photos"
+  }
+},
+{
+  "ids": ["n10"],
+  "content": {
+    "url": "RoyAndBros.jpg",
+    "caption": "Back Row: Alfred Dewey Dirks, Lawrence Dirks, Arthur Dirks. Front Row: Roy William Dirks, George Wesley Dirks.",
+    "source": "Family Photos"
+  }
+},
+{
+  "ids": ["n10", "n11"],
+  "content": {
+    "url": "RoyAndRose1911.jpg",
+    "caption": "Roy William Dirks and Rose Pohlman, January 25, 1911.",
+    "source": "Family Photos"
+  }
+},
+{
+  "ids": ["n10"],
+  "content": {
+    "url": "RoyPostCard.jpg",
+    "caption": "Homer Pohlman and Roy Dirks. Buffalo Bill's Grave, Wyoming. Picture is on Post card.",
+    "source": "Family Photos"
+  }
 }
 ]
