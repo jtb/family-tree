@@ -1982,6 +1982,13 @@
                     "location_city": "Hobart, Kiowa County",
                     "location_state": "Oklahoma"
                   },
+                  "parents_marriage": {
+                    "year": 1842,
+                    "month": 7,
+                    "day": 26,
+                    "location_city": "Wiesede, Hanover",
+                    "location_state": "Germany"
+                  },
                   "parents": [
                     {
                       "id": "n40",
