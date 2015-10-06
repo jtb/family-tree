@@ -1672,17 +1672,50 @@
               },
               "parents": [
                 {
+                  "id": "n30",
+                  "name": {
+                    "first": "Silas",
+                    "middle": "Smith",
+                    "last": "Van Nostrand"
+                  },
+                  "male": true,
+                  "occupation": "bookeeper",
+                  "birth": {
+                    "year": 1853,
+                    "month": 5,
+                    "day": 15,
+                    "location_state": "New York",
+                    "lat": 40.7127,
+                    "lon": 74.0059
+                  },
+                  "death": {
+                    "year": 1918,
+                    "location_city": "Manitowoc",
+                    "location_state": "Wisconsin"
+                  }
+                },
+                {
                   "id": "n31",
                   "name": {
                     "first": "Katharine",
-                    "last": "Van Nostrand"
+                    "last": "Van Nostrand",
+                    "maiden": "Flynn"
                   },
                   "male": false,
                   "birth": {
-                    "year": 1855,
-                    "lat": 44.5,
-                    "lon": 89.5,
-                    "location_state": "Wisconsin"
+                    "year": 1854,
+                    "month": 8,
+                    "location_city": "Plymouth",
+                    "location_state": "Wisconsin",
+                    "lat": 43.7492,
+                    "lon": 87.9767
+                  },
+                  "death": {
+                    "year": 1944,
+                    "month": 6,
+                    "day": 10,
+                    "location_city": "Lakewood",
+                    "location_state": "Ohio"
                   }
                 }
               ]
