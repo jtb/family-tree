@@ -1309,7 +1309,118 @@
                     "lon": 84.3977,
                     "location_city": "Grants Lick",
                     "location_state": "Kentucky"
-                  }
+                  },
+                  "parents_marriage": {
+                    "year": 1856,
+                    "month": 9,
+                    "day": 10,
+                    "location_city": "Campbell County",
+                    "location_state": "Kentucky"
+                  },
+                  "parents": [
+                    {
+                      "id": "n52",
+                      "name": {
+                        "first": "Robert",
+                        "middle": "Selby",
+                        "last": "Smith"
+                      },
+                      "male": true,
+                      "birth": {
+                        "year": 1834,
+                        "month": 11,
+                        "day": 22,
+                        "location_city": "Campbell County",
+                        "location_state": "Kentucky",
+                        "lat": 38.95,
+                        "lon": 84.38
+                      },
+                      "death": {
+                        "year": 1918,
+                        "month": 6,
+                        "day": 3,
+                        "location_city": "Campbell County",
+                        "location_state": "Kentucky"
+                      },
+                      "parents_marriage": {
+                        "year": 1821,
+                        "month": 4,
+                        "day": 3,
+                        "location_city": "Campbell County",
+                        "location_state": "Kentucky"
+                      },
+                      "parents": [
+                        {
+                          "id": "n104",
+                          "name": {
+                            "first": "Robert",
+                            "last": "Smith"
+                          },
+                          "male": true,
+                          "birth": {
+                            "year": 1787,
+                            "month": 6,
+                            "day": 17
+                          },
+                          "death": {
+                            "year": 1846,
+                            "month": 10,
+                            "day": 30,
+                            "location_city": "Grants Lick, Campbell County",
+                            "location_state": "Kentucky"
+                          }
+                        },
+                        {
+                          "id": "n105",
+                          "name": {
+                            "first": "Isabella",
+                            "middle": "Mills",
+                            "last": "Smith",
+                            "maiden": "Hopkins"
+                          },
+                          "male": false,
+                          "birth": {
+                            "year": 1798,
+                            "month": 1,
+                            "day": 5,
+                            "location_state": "Kentucky",
+                            "lat": 37.5,
+                            "lon": 85
+                          },
+                          "death": {
+                            "year": 1872,
+                            "month": 4,
+                            "day": 29,
+                            "location_city": "Grants Lick, Campbell County",
+                            "location_state": "Kentucky"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "n53",
+                      "name": {
+                        "first": "Sarah",
+                        "middle": "Margaret",
+                        "last": "Smith",
+                        "maiden": "Colvin"
+                      },
+                      "male": false,
+                      "birth": {
+                        "year": 1836,
+                        "month": 6,
+                        "day": 14,
+                        "location_state": "Kentucky",
+                        "lat": 37.5,
+                        "lon": 85
+                      },
+                      "death": {
+                        "year": 1898,
+                        "month": 12,
+                        "day": 31
+                      }
+                    }
+                  ]
                 },
                 {
                   "id": "n27",
@@ -1324,7 +1435,55 @@
                     "lon": 84.4903,
                     "location_city": "Newport",
                     "location_state": "Kentucky"
-                  }
+                  },
+                  "parents": [
+                    {
+                      "id": "n54",
+                      "name": {
+                        "first": "Kasper",
+                        "last": "Kratzmeier"
+                      },
+                      "male": true,
+                      "birth": {
+                        "year": 1827,
+                        "location_city": "Baden-Wurttemberg",
+                        "location_state": "Germany",
+                        "lat": 48.5378,
+                        "lon": -9.0411
+                      },
+                      "death": {
+                        "year": 1905,
+                        "month": 7,
+                        "day": 26,
+                        "location_city": "Campbell County",
+                        "location_state": "Kentucky"
+                      }
+                    },
+                    {
+                      "id": "n55",
+                      "name": {
+                        "first": "Barbara",
+                        "middle": "Margaret",
+                        "last": "Kratzmeier",
+                        "maiden": "Huffnagle"
+                      },
+                      "male": false,
+                      "birth": {
+                        "year": 1835,
+                        "location_city": "Baden-Baden",
+                        "location_state": "Germany",
+                        "lat": 48.7628,
+                        "lon": -8.2408
+                      },
+                      "death": {
+                        "year": 1906,
+                        "month": 3,
+                        "day": 4,
+                        "location_city": "Campbell County",
+                        "location_state": "Kentucky"
+                      }
+                    }
+                  ]
                 }
               ]
             }
