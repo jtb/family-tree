@@ -1286,7 +1286,11 @@
                 "location_state": "Kentucky"
               },
               "parents_marriage": {
-                "year": 1884
+                "year": 1884,
+                "month": 4,
+                "day": 23,
+                "location_city": "Campbell",
+                "location_state": "Kentucky"
               },
               "parents": [
                 {
@@ -1313,7 +1317,14 @@
                     "first": "Margaret",
                     "last": "Kratzmeier"
                   },
-                  "male": false
+                  "male": false,
+                  "birth": {
+                    "year": 1858,
+                    "lat": 39.0886,
+                    "lon": 84.4903,
+                    "location_city": "Newport",
+                    "location_state": "Kentucky"
+                  }
                 }
               ]
             }
@@ -2039,6 +2050,13 @@
                         "location_city": "Auburn",
                         "location_state": "Nebraska"
                       },
+                      "parents_marriage": {
+                        "year": 1805,
+                        "month": 12,
+                        "day": 13,
+                        "location_city": "Wiesede, Ostfriesland",
+                        "location_state": "Germany"
+                      },
                       "parents": [
                         {
                           "id": "n82",
@@ -2046,7 +2064,21 @@
                             "first": "Christoph",
                             "last": "Remmers"
                           },
-                          "male": true
+                          "male": true,
+                          "birth": {
+                            "year": 1781,
+                            "month": 7,
+                            "day": 25,
+                            "lat": 52.5167,
+                            "lon": -13.3833,
+                            "location_state": "Germany"
+                          },
+                          "death": {
+                            "year": 1848,
+                            "month": 2,
+                            "day": 26,
+                            "location_state": "Germany"
+                          }
                         },
                         {
                           "id": "n83",
@@ -2069,6 +2101,7 @@
                             "year": 1868,
                             "month": 8,
                             "day": 20,
+                            "location_city": "Auburn",
                             "location_state": "Nebraska"
                           }
                         }
