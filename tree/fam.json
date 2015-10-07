@@ -804,7 +804,7 @@
                             {
                               "id": "n201",
                               "name": {
-                                "first": "Hannah.",
+                                "first": "Hannah",
                                 "last": "Hains",
                                 "maiden": "Lybarger"
                               },
@@ -1284,6 +1284,9 @@
                 "lon": 84.4903,
                 "location_city": "New Port",
                 "location_state": "Kentucky"
+              },
+              "death": {
+                "year": 1979
               },
               "parents_marriage": {
                 "year": 1884,
