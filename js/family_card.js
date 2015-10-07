@@ -11,9 +11,11 @@ var show = function(d) {
   $("birth").innerHTML = printBirthFull(d);
   $("marriage").innerHTML = printMarriageFull(d);
   $("death").innerHTML = printDeathFull(d);
+  // $("nid").innerHTML = d.id;
 
   addPortrait(d);
   addPhotos(d);
+  addSiblings(d);
   addBios(d);
 }
 
@@ -22,6 +24,7 @@ var hide = function() {
   $("overlay").style.display = 'none';
   $("popup").style.display = 'none';
   d3.select("#photodiv").selectAll("div").remove();
+  d3.select("#sibdiv").selectAll("div").remove();
   d3.select("#biodiv").selectAll("div").remove();
 }
 
@@ -64,6 +67,29 @@ function addBios(d) {
     p.enter()
       .append('p')
       .text(String);
+
+    p.exit()
+      .remove();
+  }
+
+}
+
+function addSiblings(d) {
+  if (typeof d.siblings !== 'undefined') {
+    d3.select("#sibdiv")
+      .append('div')
+      .attr('class', 'title')
+      .text("Known Siblings");
+
+    var p = d3.select("#sibdiv").append('div').append('ul')
+      .attr('class', 'content')
+      .selectAll('li')
+      .data(d.siblings);
+    //.text(String);
+
+    p.enter()
+      .append('li')
+      .text(function(d) {return fullName(d) + " " + stats(d)});
 
     p.exit()
       .remove();
@@ -158,4 +184,29 @@ function printEvent(d, event) {
     }
   }
   return ans;
+}
+
+function printDateShort(d, event) {
+  var ans = "";
+  if (d.year) {
+    ans += event;
+    ans += printIfPresent(" ", d.month, "/");
+    ans += printIfPresent("", d.day, "/");
+    ans += d.year;
+  }
+  return ans;
+}
+
+function stats(d) {
+    var ans = "";
+    if (d.birth) {
+      ans += printDateShort(d.birth, "b.");
+    }
+    if (d.birth && d.death) {
+	ans += " - ";
+    }
+    if (d.death) {
+        ans += printDateShort(d.death, "d.");
+    }
+    return ans;
 }

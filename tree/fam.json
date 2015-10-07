@@ -24,7 +24,16 @@
         "middle": "Jocelyn",
         "last": "Brown"
       },
-      "male": false
+      "male": false,
+      "birth": {
+        "year": 1980,
+        "month": 9,
+        "day": 24,
+        "lat": 37.195,
+        "lon": 93.2861,
+        "location_city": "Springfield",
+        "location_state": "Missouri"
+      }
     }
   ],
   "parents_marriage": {
@@ -328,7 +337,9 @@
                             "year": 1794,
                             "month": 4,
                             "day": 18,
-                            "location_state": "Virginia"
+                            "location_state": "Virginia",
+                            "lat": 37.5,
+                            "lon": 79.0
                           },
                           "death": {
                             "year": 1857,
@@ -618,6 +629,8 @@
                   "birth": {
                     "year": 1866,
                     "month": 5,
+                    "lat": 40.5,
+                    "lon": 82.5,
                     "location_state": "Ohio"
                   },
                   "death": {
@@ -1785,6 +1798,8 @@
             "year": 1915,
             "month": 9,
             "day": 30,
+            "lat": 38.0862,
+            "lon": 106.1509,
             "location_city": "Saguache",
             "location_state": "Colorado"
           },
@@ -1816,6 +1831,8 @@
                 "year": 1895,
                 "month": 6,
                 "day": 22,
+                "lat": 38.2094,
+                "lon": 91.1647,
                 "location_city": "Sullivan",
                 "location_state": "Missouri"
               },
@@ -1844,6 +1861,8 @@
                     "year": 1870,
                     "month": 10,
                     "day": 5,
+                    "lat": 39.7800,
+                    "lon": 93.5500,
                     "location_city": "Livingston County",
                     "location_state": "Missouri"
                   },
@@ -1914,6 +1933,8 @@
                     "year": 1873,
                     "month": 10,
                     "day": 7,
+                    "lat": 40.1269,
+                    "lon": 93.3200,
                     "location_city": "Humphreys",
                     "location_state": "Missouri"
                   },
@@ -1986,6 +2007,8 @@
                 "year": 1894,
                 "month": 5,
                 "day": 21,
+                "lat": 38.9361,
+                "lon": 99.5592,
                 "location_city": "Ellis",
                 "location_state": "Kansas"
               },
@@ -2032,6 +2055,8 @@
                       },
                       "male": true,
                       "birth": {
+                        "lat": 51.5072,
+                        "lon": -0.1275,
                         "location_city": "London",
                         "location_state": "England"
                       },
@@ -2053,7 +2078,9 @@
                         "month": 1,
                         "day": 1,
                         "location_city": "Queenstown",
-                        "location_state": "Ireland"
+                        "location_state": "Ireland",
+                        "lat": 51.8510,
+                        "lon": -8.2967
                       },
                       "death": {
                         "year": 1933
@@ -2074,6 +2101,8 @@
                     "year": 1876,
                     "month": 5,
                     "day": 30,
+                    "lat": 40.2697,
+                    "lon": 76.8756,
                     "location_city": "Harrisburgh",
                     "location_state": "Pennsylvania"
                   },
@@ -2101,6 +2130,8 @@
             "year": 1917,
             "month": 12,
             "day": 25,
+            "lat": 40.3883,
+            "lon": 95.8422,
             "location_city": "Auburn",
             "location_state": "Nebraska"
           },
@@ -2451,6 +2482,8 @@
                       "male": true,
                       "birth": {
                         "year": 1799,
+                        "lat": 52.5167,
+                        "lon": -13.3833,
                         "location_state": "Germany"
                       },
                       "death": {
@@ -2517,6 +2550,8 @@
                         "year": 1807,
                         "month": 5,
                         "day": 15,
+                        "lat": 40.2064,
+                        "lon": 80.5597,
                         "location_city": "Bethany, Brooks County",
                         "location_state": "Virginia"
                       },

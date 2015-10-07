@@ -73,6 +73,15 @@ function fullName(d) {
   return full_name;
 }
 
+function fullNameAndNumber(d) {
+  var full_name = "<sup>" + d.id + "</sup> " + d.name.first + " ";
+  if (d.name.middle) full_name += d.name.middle + " ";
+  if (d.name.maiden) full_name += "(" + d.name.maiden + ")";
+  else full_name += d.name.last;
+  if (d.name.suffix) full_name += ", " + d.name.suffix;
+  return full_name;
+}
+
 //Print birth year and location, if present.                                                                          
     var printBirth = function(d) {
 	var ans = "";
