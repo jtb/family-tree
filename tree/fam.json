@@ -339,7 +339,7 @@
                             "day": 18,
                             "location_state": "Virginia",
                             "lat": 37.5,
-                            "lon": 79.0
+                            "lon": 79
                           },
                           "death": {
                             "year": 1857,
@@ -753,7 +753,50 @@
                                     "day": 20,
                                     "location_city": "Bedford County",
                                     "location_state": "Pennsylvania"
-                                  }
+                                  },
+                                  "parents_marriage": {
+                                    "year": 1744,
+                                    "location_city": "Smithfield TWP, Bucks County",
+                                    "location_state": "Pennsylvania"
+                                  },
+                                  "parents": [
+                                    {
+                                      "id": "n800",
+                                      "name": {
+                                        "first": "Joseph",
+                                        "middle": "Hendricksen",
+                                        "last": "Heyns"
+                                      },
+                                      "male": true,
+                                      "birth": {
+                                        "year": 1715,
+                                        "lat": 41.925,
+                                        "lon": 74,
+                                        "location_city": "Kingston",
+                                        "location_state": "New York"
+                                      }
+                                    },
+                                    {
+                                      "id": "n801",
+                                      "name": {
+                                        "first": "Helena",
+                                        "last": "Heyns",
+                                        "maiden": "Schoonmaker"
+                                      },
+                                      "male": false,
+                                      "birth": {
+                                        "year": 1711,
+                                        "lat": 41.925,
+                                        "lon": 74,
+                                        "location_city": "Kingston, Ulster County",
+                                        "location_state": "New York"
+                                      },
+                                      "death": {
+                                        "location_city": "Monroe County",
+                                        "location_state": "Pennsylvania"
+                                      }
+                                    }
+                                  ]
                                 },
                                 {
                                   "id": "n401",
@@ -1868,8 +1911,8 @@
                     "year": 1870,
                     "month": 10,
                     "day": 5,
-                    "lat": 39.7800,
-                    "lon": 93.5500,
+                    "lat": 39.78,
+                    "lon": 93.55,
                     "location_city": "Livingston County",
                     "location_state": "Missouri"
                   },
@@ -1941,7 +1984,7 @@
                     "month": 10,
                     "day": 7,
                     "lat": 40.1269,
-                    "lon": 93.3200,
+                    "lon": 93.32,
                     "location_city": "Humphreys",
                     "location_state": "Missouri"
                   },
@@ -2086,7 +2129,7 @@
                         "day": 1,
                         "location_city": "Queenstown",
                         "location_state": "Ireland",
-                        "lat": 51.8510,
+                        "lat": 51.851,
                         "lon": -8.2967
                       },
                       "death": {
