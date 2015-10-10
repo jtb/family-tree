@@ -682,6 +682,8 @@
                           "male": true,
                           "birth": {
                             "year": 1806,
+                            "month": 4,
+                            "day": 24,
                             "lat": 40.01,
                             "lon": 78.49,
                             "location_city": "Bedford County",
@@ -837,6 +839,11 @@
                                 "day": 7,
                                 "location_city": "Bedford County, Coshocton County",
                                 "location_state": "Ohio"
+                              },
+                              "parents_marriage": {
+                                "year": 1782,
+                                "location_city": "Bedford",
+                                "location_state": "Pennsylvania"
                               },
                               "parents": [
                                 {
