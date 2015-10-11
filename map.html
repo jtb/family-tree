@@ -5,6 +5,7 @@
   <script src="http://d3js.org/queue.v1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+  <script src="js/subtree.js"></script>
 </head>
 <body>
 <button onclick="update()">Re-run</button>
@@ -21,8 +22,8 @@ var svg = d3.select("body").append("svg")
   .attr("width", width)
   .attr("height", height);
 
-var duration = 30000;
-var path, routes, birthPlaces, minDate, maxDate, totalDate;
+var msPerYear = 108;
+var duration, path, routes, birthPlaces, minDate, maxDate, totalDate;
 
 queue()
   .defer(d3.json, "tree/fam.json")
@@ -79,6 +80,9 @@ function init(error, json, usa) {
       return d.parents;
     });
 
+  var param = getParameterByName('id');
+  json = findRoot(param, json);
+
   var nodes = tree.nodes(json);
 
   routes = nodes.map(createLink).filter(removeInvalid);
@@ -91,6 +95,9 @@ function init(error, json, usa) {
     return d[3];
   });
   totalDate = maxDate - minDate;
+
+  duration = msPerYear * totalDate;
+  // console.log("Total date: " + totalDate);
 
   update();
 }

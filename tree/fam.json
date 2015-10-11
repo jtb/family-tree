@@ -2130,7 +2130,7 @@
                         "location_city": "Queenstown",
                         "location_state": "Ireland",
                         "lat": 51.851,
-                        "lon": -8.2967
+                        "lon": 8.2967
                       },
                       "death": {
                         "year": 1933
@@ -2603,7 +2603,7 @@
                         "lat": 40.2064,
                         "lon": 80.5597,
                         "location_city": "Bethany, Brooks County",
-                        "location_state": "Virginia"
+                        "location_state": "West Virginia"
                       },
                       "death": {
                         "year": 1830,
