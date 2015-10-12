@@ -1300,7 +1300,109 @@
                                 "day": 19,
                                 "location_city": "Coshocton",
                                 "location_state": "Ohio"
-                              }
+                              },
+                              "parents": [
+                                {
+                                  "id": "n412",
+                                  "name": {
+                                    "first": "Samuel",
+                                    "last": "Stewart"
+                                  },
+                                  "male": true,
+                                  "birth": {
+                                    "year": 1767,
+                                    "month": 3,
+                                    "day": 5,
+                                    "lat": 40.41,
+                                    "lon": 76.79,
+                                    "location_city": "Paxton Twp., Dauphin Co.",
+                                    "location_state": "Pennsylvania"
+                                  },
+                                  "death": {
+                                    "year": 1837,
+                                    "location_city": "Allegheny Co.",
+                                    "location_state": "Pennsylvania"
+                                  },
+                                  "parents_marriage": {
+                                    "year": 1764
+                                  },
+                                  "parents": [
+                                    {
+                                      "id": "n824",
+                                      "name": {
+                                        "first": "Hugh",
+                                        "last": "Stewart"
+                                      },
+                                      "male": true,
+                                      "birth": {
+                                        "year": 1719,
+                                        "month": 6,
+                                        "day": 11,
+                                        "lat": 55.858,
+                                        "lon": 4.259,
+                                        "location_city": "Glasgow",
+                                        "location_state": "Scotland"
+                                      },
+                                      "death": {
+                                        "year": 1798,
+                                        "month": 10,
+                                        "day": 8,
+                                        "location_city": "Dauphin County",
+                                        "location_state": "Pennsylvania"
+                                      }
+                                    },
+                                    {
+                                      "id": "n825",
+                                      "name": {
+                                        "first": "Agnes \"Nancy\"",
+                                        "last": "Stewart",
+                                        "maiden": "Moore"
+                                      },
+                                      "male": false,
+                                      "birth": {
+                                        "year": 1735,
+                                        "month": 2,
+                                        "day": 28,
+                                        "lat": 52.2,
+                                        "lon": 2.1667,
+                                        "location_city": "Castlemorton, Worcestershire",
+                                        "location_state": "England"
+                                      },
+                                      "death": {
+                                        "year": 1799,
+                                        "month": 3,
+                                        "day": 22,
+                                        "location_city": "Lower Paxton, Dauphin",
+                                        "location_state": "Pennsylvania"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "n413",
+                                  "name": {
+                                    "first": "Jane",
+                                    "last": "Stewart",
+                                    "maiden": "Patterson"
+                                  },
+                                  "male": false,
+                                  "birth": {
+                                    "year": 1774,
+                                    "month": 1,
+                                    "day": 18,
+                                    "lat": 39.9678,
+                                    "lon": 79.8616,
+                                    "location_city": "Redstone, Westmoreland Co",
+                                    "location_state": "Pennsylvania"
+                                  },
+                                  "death": {
+                                    "year": 1867,
+                                    "month": 8,
+                                    "location_city": "Alleheny Co.",
+                                    "location_state": "Pennsylvania"
+                                  }
+                                }
+                              ]
                             },
                             {
                               "id": "n207",
