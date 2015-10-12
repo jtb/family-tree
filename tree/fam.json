@@ -1349,7 +1349,27 @@
                                         "day": 8,
                                         "location_city": "Dauphin County",
                                         "location_state": "Pennsylvania"
-                                      }
+                                      },
+                                      "parents": [
+                                        {
+                                          "id": "n1648",
+                                          "name": {
+                                            "first": "Robert",
+                                            "last": "Stewart"
+                                          },
+                                          "male": true,
+                                          "birth": {
+                                            "year": 1665,
+                                            "lat": 55.858,
+                                            "lon": 4.259,
+                                            "location_city": "Glasgow",
+                                            "location_state": "Scotland"
+                                          },
+                                          "death": {
+                                            "year": 1730
+                                          }
+                                        }
+                                      ]
                                     },
                                     {
                                       "id": "n825",
@@ -1400,7 +1420,122 @@
                                     "month": 8,
                                     "location_city": "Alleheny Co.",
                                     "location_state": "Pennsylvania"
-                                  }
+                                  },
+                                  "parents": [
+                                    {
+                                      "id": "n826",
+                                      "name": {
+                                        "first": "Thomas",
+                                        "last": "Patterson"
+                                      },
+                                      "male": true,
+                                      "birth": {
+                                        "year": 1782,
+                                        "month": 8,
+                                        "day": 24
+                                      },
+                                      "death": {
+                                        "year": 1860,
+                                        "month": 6,
+                                        "day": 2
+                                      },
+                                      "parents_marriage": {
+                                        "year": 1773,
+                                        "month": 8,
+                                        "day": 24,
+                                        "location_city": "Adams County",
+                                        "location_state": "Pennsylvania"
+                                      },
+                                      "parents": [
+                                        {
+                                          "id": "n1652",
+                                          "name": {
+                                            "first": "William",
+                                            "last": "Patterson"
+                                          },
+                                          "male": true,
+                                          "birth": {
+                                            "year": 1749,
+                                            "month": 6,
+                                            "day": 12
+                                          },
+                                          "death": {
+                                            "year": 1846,
+                                            "month": 5,
+                                            "day": 18,
+                                            "location_city": "McConnellsburg",
+                                            "location_state": "Pennsylvania"
+                                          },
+                                          "parents": [
+                                            {
+                                              "name": {
+                                                "first": "Thomas",
+                                                "last": "Patterson",
+                                                "suffix": "Sr."
+                                              },
+                                              "male": true,
+                                              "birth": {
+                                                "year": 1724
+                                              },
+                                              "death": {
+                                                "year": 1822,
+                                                "month": 6,
+                                                "day": 5,
+                                                "location_city": "Washington Twp., Fayette Co.",
+                                                "location_state": "Pennsylvania"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "id": "n1653",
+                                          "name": {
+                                            "first": "Jane",
+                                            "last": "Patterson",
+                                            "maiden": "Morrow"
+                                          },
+                                          "male": false,
+                                          "birth": {
+                                            "year": 1750,
+                                            "month": 9,
+                                            "day": 7,
+                                            "location_city": "Waynesboro",
+                                            "location_state": "Pennsylvania"
+                                          },
+                                          "death": {
+                                            "year": 1832,
+                                            "month": 11,
+                                            "day": 3,
+                                            "location_city": "McConnellsburg",
+                                            "location_state": "Pennsylvania"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "id": "n827",
+                                      "name": {
+                                        "first": "Elizabeth \"Betsy\"",
+                                        "last": "Patterson",
+                                        "maiden": "Burns"
+                                      },
+                                      "male": false,
+                                      "birth": {
+                                        "year": 1784,
+                                        "month": 3,
+                                        "day": 23,
+                                        "location_city": "",
+                                        "location_state": ""
+                                      },
+                                      "death": {
+                                        "year": 1871,
+                                        "month": 3,
+                                        "day": 20,
+                                        "location_city": "",
+                                        "location_state": ""
+                                      }
+                                    }
+                                  ]
                                 }
                               ]
                             },
