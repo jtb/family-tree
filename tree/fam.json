@@ -1830,7 +1830,67 @@
                     "day": 20,
                     "location_city": "Manitowoc",
                     "location_state": "Wisconsin"
-                  }
+                  },
+                  "parents_marriage": {
+                    "year": 1858,
+                    "month": 3,
+                    "day": 20,
+                    "location_city": "Manitowoc",
+                    "location_state": "Wisconsin"
+                  },
+                  "parents": [
+                    {
+                      "id": "n58",
+                      "name": {
+                        "first": "George",
+                        "middle": "Ehrhard",
+                        "last": "Beer"
+                      },
+                      "male": true,
+                      "birth": {
+                        "year": 1821,
+                        "month": 1,
+                        "day": 4,
+                        "lat": 49.7167,
+                        "lon": -12.2667,
+                        "location_city": "Wurzelbrunn, Floss, Bavaria",
+                        "location_state": "Germany"
+                      },
+                      "death": {
+                        "year": 1864,
+                        "month": 10,
+                        "day": 29,
+                        "location_city": "Manitowoc",
+                        "location_state": "Wisconsin"
+                      }
+                    },
+                    {
+                      "id": "n59",
+                      "name": {
+                        "first": "Julia",
+                        "middle": "Kathrina",
+                        "last": "Beer",
+                        "maiden": "Zinns"
+                      },
+                      "male": false,
+                      "birth": {
+                        "year": 1830,
+                        "month": 8,
+                        "day": 3,
+                        "lat": 49.04,
+                        "lon": -7.95,
+                        "location_city": "Wissembourg, Bas-Rhin, Alsace",
+                        "location_state": "France"
+                      },
+                      "death": {
+                        "year": 1884,
+                        "month": 7,
+                        "day": 24,
+                        "location_city": "Manitowoc",
+                        "location_state": "Wisconsin"
+                      }
+                    }
+                  ]
                 }
               ]
             },

@@ -604,5 +604,21 @@
     "caption": "Homer Pohlman and Roy Dirks. Buffalo Bill's Grave, Wyoming. Picture is on Post card.",
     "source": "Family Photos"
   }
+},
+{
+  "ids": ["n58"],
+  "content": {
+    "url": "GeorgeBeer.jpg",
+    "caption": "This framed miniature portrait of George Beer was kept by his wife, Julia, after his death. With frame it measures about 4.5in by 4in. This type of remembrance disappeared with the growth of photography. Perhaps the lack of a photo of George is why she had one made of her daughters at the death of her husband.",
+    "source": "http://jemgen.com/getperson.php?personID=I64&tree=A001"
+  }
+},
+{
+  "ids": ["n59"],
+  "content": {
+    "url": "JuliaZinns.jpg",
+    "caption": "Julia and her daugther Anna (Dora's sister)",
+    "source": "http://jemgen.com/getperson.php?personID=I65&tree=A001"
+  }
 }
 ]
