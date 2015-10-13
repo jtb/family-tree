@@ -2122,12 +2122,18 @@
                       "birth": {
                         "year": 1839,
                         "month": 7,
-                        "day": 22
+                        "day": 22,
+                        "lat": 39.1400,
+                        "lon": 92.7000,
+                        "location_city": "Howard County",
+                        "location_state": "Missouri"
                       },
                       "death": {
                         "year": 1905,
                         "month": 6,
-                        "day": 22
+                        "day": 22,
+                        "location_city": "Bedford",
+                        "location_state": "Missouri"
                       }
                     },
                     {
