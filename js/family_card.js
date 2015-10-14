@@ -17,6 +17,7 @@ var show = function(d) {
   addPhotos(d);
   addSiblings(d);
   addBios(d);
+  addMemorial(d);
 }
 
 // Hide overlay and popup
@@ -26,6 +27,7 @@ var hide = function() {
   d3.select("#photodiv").selectAll("div").remove();
   d3.select("#sibdiv").selectAll("div").remove();
   d3.select("#biodiv").selectAll("div").remove();
+  d3.select("#memorialdiv").selectAll("div").remove();
 }
 
 var monthNames = ["Offset1", "January", "February", "March", "April", "May", "June",
@@ -129,6 +131,48 @@ function addPhotos(d) {
       .attr("alt", "")
       .attr("src", function(d) {
         return "data/thumbnails/" + d.url;
+      });
+
+    var caption = div.append('div')
+      .attr('class', 'highslide-caption')
+      .text(function(d) { return d.caption; });
+
+    div.exit().remove();
+  }
+}
+
+function addMemorial(d) {
+  var photodata = {};
+  if (d.id in memorial) {
+    photodata = memorial[d.id];
+
+    d3.select("#memorialdiv")
+      .append('div')
+      .attr('class', 'title')
+      .text("Memorial");
+
+    var div = d3.select("#memorialdiv")
+	.append('div')
+        .attr('class', 'content')
+        .attr("id", "scroll")
+        .selectAll('div')
+        .data(photodata);
+
+    div.enter().append('div')
+        .attr('class', 'picture');
+
+    var a = div.append('a')
+        .on("click", function() { d3.event.preventDefault(); return hs.expand(this); })
+	.attr("href", function(d) {
+		return "data/tombstones/" + d.url;
+	    })
+	.attr('rel', "highslide")
+	.attr('class', "highslide");
+
+    var img = a.append('img')
+      .attr("alt", "")
+      .attr("src", function(d) {
+        return "data/tombstonethumbs/" + d.url;
       });
 
     var caption = div.append('div')

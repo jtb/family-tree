@@ -60,24 +60,27 @@
     <div class="cardsection" id="photodiv"></div>
     <div class="cardsection" id="sibdiv"></div>
     <div class="cardsection" id="biodiv"></div>
+    <div class="cardsection" id="memorialdiv"></div>
   </div>
 </div>
 </div>
 <script>
-var bio, sources, portrait, photo;
+var bio, sources, portrait, photo, memorial;
 queue()
   .defer(d3.json, "tree/fam.json")
   .defer(d3.json, "data/bios/bios.json")
   .defer(d3.json, "data/portraits/portraits.json")
   .defer(d3.json, "data/photos/people.json")
+  .defer(d3.json, "data/tombstones/tombstones.json")
   .await(init)
 
-function init(error, json, bios, portraits, photos) {
+function init(error, json, bios, portraits, photos, tombstones) {
   if (error) throw error;
   bio = arrayToMap(bios, 'id', 'bio');
   sources = arrayToMap(bios, 'id', 'sources');
   portrait = arrayToMap(portraits, 'id', 'portrait');
   photo = arrayMultiKeyToMap(photos, 'ids', 'content');
+  memorial = arrayMultiKeyToMap(tombstones, 'ids', 'content');
   // alert(bio['n192']);
   buildTree(json);
 }

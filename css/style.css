@@ -126,6 +126,10 @@ rect.btn {
   overflow: hidden;
 }
 
+#photodivs {
+  overflow: hidden;
+}
+
 .cardsection .title {
   border-top: 3px solid #DBB84D;
   padding: 10px;
