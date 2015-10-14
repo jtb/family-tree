@@ -1747,6 +1747,9 @@
                     "location_city": "Manitowoc",
                     "location_state": "Wisconsin"
                   },
+                  "parents_marriage": {
+                    "year": 1858
+                  },
                   "parents": [
                     {
                       "id": "n56",
@@ -1802,6 +1805,13 @@
                         "lon": -8.6317,
                         "location_city": "Delmanhorst, Oldenburg",
                         "location_state": "Germany"
+                      },
+                      "death": {
+                        "year": 1920,
+                        "month": 3,
+                        "day": 26,
+                        "location_city": "Manitowoc",
+                        "location_state": "Wisconsin"
                       }
                     }
                   ]
