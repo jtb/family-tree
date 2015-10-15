@@ -479,9 +479,9 @@
                                 "location_state": "Indiana"
                               },
                               "parents_marriage": {
-                                "year": 1791,
-                                "month": 10,
-                                "day": 7
+                                "year": 1764,
+                                "location_city": "Calvert County",
+                                "location_state": "Maryland"
                               },
                               "parents": [
                                 {
