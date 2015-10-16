@@ -1606,7 +1606,163 @@
                         "year": 1898,
                         "month": 12,
                         "day": 31
-                      }
+                      },
+                      "parents_marriage": {
+                        "year": 1829,
+                        "month": 12,
+                        "day": 9,
+                        "location_city": "Pendleton County",
+                        "location_state": "Kentucky"
+                      },
+                      "parents": [
+                        {
+                          "id": "n106",
+                          "name": {
+                            "first": "Daniel",
+                            "middle": "Threlkeld",
+                            "last": "Colvin"
+                          },
+                          "male": true,
+                          "birth": {
+                            "year": 1808,
+                            "month": 4,
+                            "day": 3,
+                            "lat": 38.69,
+                            "lon": 84.08,
+                            "location_city": "Bracken County",
+                            "location_state": "Kentucky"
+                          },
+                          "death": {
+                            "year": 1851,
+                            "month": 7,
+                            "day": 4,
+                            "location_city": "Grants Lick, Campbell",
+                            "location_state": "Kentucky"
+                          }
+                        },
+                        {
+                          "id": "n107",
+                          "name": {
+                            "first": "Margaret",
+                            "last": "Colvin",
+                            "maiden": "Aulick"
+                          },
+                          "male": false,
+                          "birth": {
+                            "year": 1812,
+                            "month": 4,
+                            "day": 6,
+                            "lat": 38.69,
+                            "lon": 84.36,
+                            "location_city": "Pendleton County",
+                            "location_state": "Kentucky"
+                          },
+                          "death": {
+                            "year": 1888,
+                            "month": 1,
+                            "day": 31,
+                            "location_city": "Campbell County",
+                            "location_state": "Kentucky"
+                          },
+                          "parents": [
+                            {
+                              "id": "n214",
+                              "name": {
+                                "first": "Carl (Charles)",
+                                "middle": "Andreas",
+                                "last": "Aulick"
+                              },
+                              "male": true,
+                              "birth": {
+                                "year": 1784,
+                                "month": 10,
+                                "day": 8,
+                                "lat": 39.2833,
+                                "lon": 76.6167,
+                                "location_city": "Baltimore",
+                                "location_state": "Maryland"
+                              },
+                              "death": {
+                                "year": 1863,
+                                "month": 1,
+                                "day": 30,
+                                "location_city": "Four Oaks, Pendleton County",
+                                "location_state": "Kentucky"
+                              },
+                              "parents_marriage": {
+                                "year": 1784,
+                                "month": 1,
+                                "day": 1
+                              },
+                              "parents": [
+                                {
+                                  "id": "n428",
+                                  "name": {
+                                    "first": "Carl Christopher",
+                                    "middle": "Edman",
+                                    "last": "Aulich"
+                                  },
+                                  "male": true,
+                                  "birth": {
+                                    "year": 1760,
+                                    "month": 9,
+                                    "day": 17,
+                                    "lat": 51.3647,
+                                    "lon": -17.4697,
+                                    "location_city": "Twardogóra",
+                                    "location_state": "Poland"
+                                  },
+                                  "death": {
+                                    "year": 1817,
+                                    "month": 5,
+                                    "day": 1,
+                                    "location_city": "Frederick",
+                                    "location_state": "Virginia"
+                                  }
+                                },
+                                {
+                                  "id": "n429",
+                                  "name": {
+                                    "first": "Margaret",
+                                    "last": "Aulick",
+                                    "maiden": "Hoots"
+                                  },
+                                  "male": false,
+                                  "birth": {
+                                    "year": 1760
+                                  },
+                                  "death": {
+                                    "year": 1803,
+                                    "month": 2,
+                                    "day": 3,
+                                    "location_city": "Winchester, Frederick",
+                                    "location_state": "Virginia"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "n215",
+                              "name": {
+                                "first": "Frances",
+                                "last": "Aulick",
+                                "maiden": "Dulaney"
+                              },
+                              "male": false,
+                              "birth": {
+                                "year": 1790
+                              },
+                              "death": {
+                                "year": 1854,
+                                "month": 2,
+                                "day": 7,
+                                "location_city": "Bishop Ridge, Pendleton County",
+                                "location_state": "Kentucky"
+                              }
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 },
@@ -2133,8 +2289,8 @@
                         "year": 1839,
                         "month": 7,
                         "day": 22,
-                        "lat": 39.1400,
-                        "lon": 92.7000,
+                        "lat": 39.14,
+                        "lon": 92.7,
                         "location_city": "Howard County",
                         "location_state": "Missouri"
                       },
