@@ -2945,6 +2945,7 @@
                   },
                   "parents": [
                     {
+                      "id": "n46",
                       "name": {
                         "first": "Thomas",
                         "last": "Crawford"
@@ -2960,7 +2961,7 @@
                         "location_state": "West Virginia"
                       },
                       "death": {
-                        "year": 1830,
+                        "year": 1888,
                         "month": 10,
                         "day": 11,
                         "location_city": "Arcata Humboldt County",
@@ -2968,6 +2969,7 @@
                       }
                     },
                     {
+                      "id": "n47",
                       "name": {
                         "first": "Diana",
                         "last": "Crawford",
