@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>file:///Users/jbrown/touch/touch.html </title>
+  <script type='text/javascript'>
+  var canvas;
+  var ctx;
+  var lastPt = null;
+  var points = [];
+  var arcLen = 0;
+  var lengths = [0]
+
+  function init() {
+    var touchzone = document.getElementById("mycanvas");
+    touchzone.addEventListener("touchstart", start, false);
+    touchzone.addEventListener("touchmove", move, false);
+    touchzone.addEventListener("touchend", end, false);
+    ctx = touchzone.getContext("2d"); 
+  }
+  function start(event) {
+    lastPt = null;
+    ctx.fillStyle = 'black';
+    addPoint(event);
+  }
+  function move(event) {
+    event.preventDefault();
+    addPoint(event);
+    var currentPoint = {x:event.touches[0].pageX, y:event.touches[0].pageY};
+    if(lastPt != null) {
+      ctx.beginPath();
+      ctx.moveTo(lastPt.x, lastPt.y);
+      ctx.lineTo(currentPoint.x, currentPoint.y);
+      ctx.lineWidth = 5;
+      ctx.stroke();
+    }
+    lastPt = currentPoint;
+  }
+  function end(event) {
+    // console.log("end");
+    event.preventDefault();
+    lastPt = null;
+    var coords = document.getElementById("coords");
+    var prettyPoints = "";
+    ctx.fillStyle = 'red';
+
+    var n = 16;
+    var I = arcLen / (n-1);
+    var D = 0;
+    // var newPoints = [points[0]];
+    ctx.fillRect(points[0].x-5,points[0].y-5,10,10);
+    var counter = 1;
+    for (var i = 1; i < points.length; i++) {
+      var d = distance(points[i-1], points[i]);
+      if ((D+d) >= I) {
+        //newPoints.push(interp(points[i-1], points[i], (I-D)/d));
+        var pt = interp(points[i-1], points[i], (I-D)/d);
+        ctx.fillRect(pt.x-5,pt.y-5,10,10);
+        counter++;
+        D = 0;
+        points[i-1] = pt;
+        i--;
+      } else {
+        D += d;
+      }
+    }
+    while (counter !== n) {
+      ctx.fillRect(points[points.length-1].x-5,points[points.length-1].y-5,10,10);
+      counter++;
+    }
+
+    for(var i = 0; i < points.length; i++) {
+      prettyPoints = prettyPoints.concat("(" + points[i].x + ", " + points[i].y + ")<br/>");
+
+    }
+    coords.innerHTML = prettyPoints;
+
+  }
+  function addPoint(event) {
+    var coords = document.getElementById("coords");
+    coords.innerHTML = 'x: ' + event.touches[0].pageX + ', y: ' + event.touches[0].pageY;
+    var currentPoint = {x:event.touches[0].pageX, y:event.touches[0].pageY};
+
+    if (lastPt != null) {      
+      var dist = distance(lastPt, currentPoint);
+      arcLen += dist;
+      lengths.push(dist);
+    } else {
+      arcLen = 0;
+      lengths = [0];
+      points = [];
+    }
+    points.push(currentPoint);
+  }
+  function distance(pt1, pt2) {
+    var diffX = pt1.x - pt2.x;
+    var diffY = pt1.y - pt2.y;
+    return Math.sqrt(diffX*diffX + diffY*diffY);
+  }
+  function interp(pt1, pt2, fract) {
+    return {x: pt1.x + fract*(pt2.x - pt1.x), y: pt1.y + fract*(pt2.y - pt1.y)};
+  }
+  </script>
+</head>
+<body onload="init()">
+  <canvas id="mycanvas" width="662" height="373" style="border: 1px solid #ccc">
+    Canvas element not supported<br />
+  </canvas>
+  <!--<div style="width:50%;height:240px;border:1px solid black;" id="touchzone"></div>-->
+  <div style="width:50%;height:240px" id="coords"></div>
+</body>
+</html>
