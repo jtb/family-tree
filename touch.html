@@ -3,19 +3,71 @@
 <head>
   <title>file:///Users/jbrown/touch/touch.html </title>
   <script type='text/javascript'>
-  var canvas;
+  var touchzone;
   var ctx;
+  var dtx;
   var lastPt = null;
   var points = [];
+  var keypoints = [];
   var arcLen = 0;
-  var lengths = [0]
+  var lengths = [0];
+  var meanX = 0;
+  var meanY = 0;
+
+var temp = [
+//{x:-70, y:0},
+//{x:-60, y:0},
+//{x:-50, y:0},
+//{x:-40, y:0},
+//{x:-30, y:0},
+//{x:-20, y:0},
+//{x:-10, y:0},
+//{x:0, y:0},
+//{x:0, y:0},
+//{x:10, y:0},
+//{x:20, y:0},
+//{x:30, y:0},
+//{x:40, y:0},
+//{x:50, y:0},
+//{x:60, y:0},
+//{x:70, y:0},
+//];
+{x:78.63800572037445, y:-55.67429829809279},
+{x:46.21499429893947, y:-72.19761323856702},
+{x:10.60340530383354, y:-79.59857329457691},
+{x:-25.654540408244088, y:-82.43130208227248},
+{x:-60.376353573488075, y:-73.86089337624318},
+{x:-75.21799708724274, y:-41.472896433301585},
+{x:-60.440359228550136, y:-10.79367887201738},
+{x:-25.945216797041212, y:-0.6144478563470699},
+{x:10.558994944679853, y:-0.4862947580537309},
+{x:45.85255736306601, y:6.086552792761665},
+{x:68.64829403312115, y:32.2354365842838},
+{x:66.64459466388587, y:66.98236422909585},
+{x:33.92770361698547, y:80.82754340385921},
+{x:-2.533388664772019, y:81.45869730737596},
+{x:-39.046706497717935, y:81.45869730737596},
+{x:-71.87398768782867, y:68.0807065847197}];
+
 
   function init() {
-    var touchzone = document.getElementById("mycanvas");
+    touchzone = document.getElementById("mycanvas");
     touchzone.addEventListener("touchstart", start, false);
     touchzone.addEventListener("touchmove", move, false);
     touchzone.addEventListener("touchend", end, false);
-    ctx = touchzone.getContext("2d"); 
+    ctx = touchzone.getContext("2d");
+    dtx = document.getElementById("drawing").getContext("2d");
+
+    var zone = document.getElementById("drawing");
+    var offsetLeft = zone.width/2;
+    var offsetTop = zone.height/2;
+    for (var i = 1; i < temp.length; i++) {
+     dtx.beginPath();
+     dtx.moveTo(temp[i-1].x + offsetLeft, temp[i-1].y + offsetTop);
+     dtx.lineTo(temp[i].x + offsetLeft, temp[i].y + offsetTop);
+     dtx.lineWidth = 5;
+     dtx.stroke();
+   } 
   }
   function start(event) {
     lastPt = null;
@@ -25,7 +77,7 @@
   function move(event) {
     event.preventDefault();
     addPoint(event);
-    var currentPoint = {x:event.touches[0].pageX, y:event.touches[0].pageY};
+    var currentPoint = {x:event.touches[0].pageX-touchzone.offsetLeft, y:event.touches[0].pageY-touchzone.offsetTop};
     if(lastPt != null) {
       ctx.beginPath();
       ctx.moveTo(lastPt.x, lastPt.y);
@@ -35,12 +87,36 @@
     }
     lastPt = currentPoint;
   }
+  function center(points) {
+   meanX = 0;
+   meanY = 0;
+   for(var i = 0; i < points.length; i++) {
+     meanX += points[i].x;
+     meanY += points[i].y;
+   }
+   meanX /= points.length;
+   meanY /= points.length;
+   var newPoints = [];
+   for(var i = 0; i < points.length; i++) {
+     newPoints[i] = {x: points[i].x - meanX, y:points[i].y - meanY};
+   }
+   
+   return newPoints;
+  }
+  function drawCentered() {
+   var centered = center(keypoints);
+
+   console.log("cool beans");
+
+  }
+
   function end(event) {
+
     // console.log("end");
     event.preventDefault();
     lastPt = null;
-    var coords = document.getElementById("coords");
-    var prettyPoints = "";
+
+
     ctx.fillStyle = 'red';
 
     var n = 16;
@@ -48,12 +124,14 @@
     var D = 0;
     // var newPoints = [points[0]];
     ctx.fillRect(points[0].x-5,points[0].y-5,10,10);
+    keypoints.push(points[0]);
     var counter = 1;
     for (var i = 1; i < points.length; i++) {
       var d = distance(points[i-1], points[i]);
       if ((D+d) >= I) {
         //newPoints.push(interp(points[i-1], points[i], (I-D)/d));
         var pt = interp(points[i-1], points[i], (I-D)/d);
+        keypoints.push(pt);
         ctx.fillRect(pt.x-5,pt.y-5,10,10);
         counter++;
         D = 0;
@@ -63,22 +141,81 @@
         D += d;
       }
     }
-    while (counter !== n) {
-      ctx.fillRect(points[points.length-1].x-5,points[points.length-1].y-5,10,10);
+    while (counter < n) {
+      var pt =  {x:points[points.length-1].x, y:points[points.length-1].y};
+      ctx.fillRect(pt.x - 5, pt.y - 5,10,10);
+      keypoints.push(pt);
       counter++;
     }
+    drawCentered();
+    // for(var i = 0; i < points.length; i++) {
+    //   prettyPoints = prettyPoints.concat("(" + points[i].x + ", " + points[i].y + ")<br/>");
+    // }
+    calcAngle();
+  }
+  function calcAngle() {
+    var centered = center(keypoints);
 
-    for(var i = 0; i < points.length; i++) {
-      prettyPoints = prettyPoints.concat("(" + points[i].x + ", " + points[i].y + ")<br/>");
+   //var prettyPoints = "";
+   //for(var i = 0; i < centered.length; i++) {
+   //  prettyPoints = prettyPoints.concat("(" + centered[i].x + ", " + centered[i].y + ")<br/>");
+   //}
+   //var coords = document.getElementById("coords");
+   //coords.innerHTML = prettyPoints;
 
+
+    //var centered = [];
+    //for (var i = 0; i < temp.length; i++) {
+    //  centered[i] = temp[temp.length - i - 1];
+    //}
+    var num = 0;
+    var denom = 0;
+    for (var i = 0; i < centered.length; i++) {
+      num += (temp[i].y*centered[i].x - temp[i].x*centered[i].y);
+      // num += (temp[i].x*centered[i].y - temp[i].y*centered[i].x);
+      denom += (centered[i].x*temp[i].x + centered[i].y*temp[i].y);
     }
-    coords.innerHTML = prettyPoints;
+    var theta = Math.atan2(num, denom);
+    var sum = 0;
+    var templen = 0;
+    var gestlen = 0;
 
+    var newPts = [];
+
+    for (var i = 0; i < centered.length; i++) {
+      var D2 = temp[i].x*temp[i].x + temp[i].y*temp[i].y;
+      var d2 = centered[i].x*centered[i].x + centered[i].y*centered[i].y;
+      var newPt = {x:centered[i].x*Math.cos(theta) - centered[i].y*Math.sin(theta), y: centered[i].y*Math.cos(theta) + centered[i].x*Math.sin(theta)};
+      templen += D2;
+      gestlen += d2;
+      sum += (newPt.x*temp[i].x + newPt.y*temp[i].y);
+      newPts.push(newPt);
+    }
+
+     var zone = document.getElementById("drawing");
+     var offsetLeft = zone.width/2;
+     var offsetTop = zone.height/2;
+
+     dtx.fillStyle = 'red';
+     for (var i = 1; i < newPts.length; i++) {
+       dtx.fillRect(newPts[i].x - 5 + offsetLeft, newPts[i].y - 5 + offsetTop,10,10);
+       //dtx.beginPath();
+       //dtx.moveTo(centered[i-1].x + offsetLeft, centered[i-1].y + offsetTop);
+       //dtx.lineTo(centered[i].x + offsetLeft, centered[i].y + offsetTop);
+       //dtx.lineWidth = 5;
+       //dtx.stroke();
+     }
+
+    var output = "";
+    output += "Angle: " + Math.atan2(num, denom)*(180/3.14) + "<br/>";
+    output += "Score: " + sum/(Math.sqrt(templen)*Math.sqrt(gestlen));
+    var coords = document.getElementById("coords");
+    coords.innerHTML = output;
   }
   function addPoint(event) {
     var coords = document.getElementById("coords");
-    coords.innerHTML = 'x: ' + event.touches[0].pageX + ', y: ' + event.touches[0].pageY;
-    var currentPoint = {x:event.touches[0].pageX, y:event.touches[0].pageY};
+    coords.innerHTML = 'x: ' + (event.touches[0].pageX-touchzone.offsetLeft) + ', y: ' + (event.touches[0].pageY-touchzone.offsetTop);
+    var currentPoint = {x:event.touches[0].pageX-touchzone.offsetLeft, y:event.touches[0].pageY-touchzone.offsetTop};
 
     if (lastPt != null) {      
       var dist = distance(lastPt, currentPoint);
@@ -88,6 +225,7 @@
       arcLen = 0;
       lengths = [0];
       points = [];
+      keypoints = [];
     }
     points.push(currentPoint);
   }
@@ -102,9 +240,22 @@
   </script>
 </head>
 <body onload="init()">
+  <div>
+  <canvas id="template" width="20" height="20" style="border: 1px solid #ccc">
+    Canvas element not supported<br />
+  </canvas>
+  </div>
+  <div>
   <canvas id="mycanvas" width="662" height="373" style="border: 1px solid #ccc">
     Canvas element not supported<br />
   </canvas>
+  </div>
+  <div>
+
+  <canvas id="drawing" width="662" height="373" style="border: 1px solid #ccc">
+    Canvas element not supported<br />
+  </canvas>
+  </div>
   <!--<div style="width:50%;height:240px;border:1px solid black;" id="touchzone"></div>-->
   <div style="width:50%;height:240px" id="coords"></div>
 </body>
