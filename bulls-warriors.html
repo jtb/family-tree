@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.area.above {
+  fill: rgb(206,17,65);
+}
+
+.area.below {
+  fill: rgb(253,185,39);
+}
+
+.line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.lineBulls {
+  fill: none;
+  stroke: rgb(6,25,34);
+  stroke-width: 1.5px;
+}
+
+.lineWarriors {
+  fill: none;
+  stroke: rgb(0,107,182);
+  stroke-width: 1.5px;
+}
+</style>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+</head>
+<body>
+<!--<script src="//d3js.org/d3.v3.min.js"></script>-->
+<script>
+// window.onresize = function(){ location.reload(); }
+
+var margin = {top: 20, right: 20, bottom: 50, left: 70},
+    width = window.innerWidth - margin.left - margin.right,
+    height = window.innerHeight - margin.top - margin.bottom;
+
+var x = d3.scale.linear()
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("top");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+var lineGames = d3.svg.area()
+    .interpolate("step-after")
+    .x(function(d) { return x(d.game); })
+    .y(function(d) { return y(d.game); });
+
+var lineWarriors = d3.svg.area()
+    .interpolate("step-after")
+    .x(function(d) { return x(d.game); })
+    .y(function(d) { return y(d["Warriors"]); });
+
+var lineBulls = d3.svg.area()
+    .interpolate("step-after")
+    .x(function(d) { return x(d.game); })
+    .y(function(d) { return y(d["Bulls"]); });
+
+var area = d3.svg.area()
+    .interpolate("step-after")
+    .x(function(d) { return x(d.game); })
+    .y1(function(d) { return y(d["Warriors"]); });
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.tsv("data.tsv", function(error, data) {
+  if (error) throw error;
+
+  data.forEach(function(d) {
+    d.game = +d.game;
+    d["Warriors"]= +d["Warriors"];
+    d["Bulls"] = +d["Bulls"];
+  });
+
+  x.domain(d3.extent(data, function(d) { return d.game; }));
+  y.domain(d3.extent(data, function(d) { return d.game; }));
+
+/*
+  y.domain([
+    d3.min(data, function(d) { return Math.min(d["Warriors"], d["Bulls"]); }),
+    d3.max(data, function(d) { return Math.max(d["Warriors"], d["Bulls"]); })
+  ]);
+*/
+
+  svg.datum(data);
+
+  svg.append("clipPath")
+      .attr("id", "clip-below")
+    .append("path")
+      .attr("d", area.y0(height));
+
+  svg.append("clipPath")
+      .attr("id", "clip-above")
+    .append("path")
+      .attr("d", area.y0(0));
+
+  svg.append("path")
+      .attr("class", "area above")
+      .attr("clip-path", "url(#clip-above)")
+      .attr("d", area.y0(function(d) { return y(d["Bulls"]); }));
+
+  svg.append("path")
+      .attr("class", "area below")
+      .attr("clip-path", "url(#clip-below)")
+      .attr("d", area);
+
+  svg.selectAll("grid")
+    .data(data)
+    .enter().append("line")
+    .attr("x1", function(d) { return x(d.game);})
+    .attr("y1", function(d, i) {
+      if (i == 0) return y(0);
+      return y(Math.min(data[i-1]["Bulls"], data[i-1]["Warriors"]));
+    })
+    //.attr("y1", function(d) { return y(Math.min(d["Bulls"], d["Warriors"]));})
+    .attr("x2", function(d) { return x(d.game);})
+    .attr("y2", function(d) { return y(Math.max(d["Warriors"], d["Bulls"]));})
+    //.attr("x2", function(d) { return x(d.game);})
+    //.attr("y2", function(d) { return y(d.game);})
+    .attr("stroke-width", 1)
+    .attr("stroke", "gray");
+
+  data.forEach(function(d1) {
+    data.forEach(function(d2) {
+      //console.log(d1.game + " " + d2.game);
+      if (d1.game < data.length - 1) {
+      if ((d2.game >= d1["Warriors"] && d2.game <= d1["Bulls"]) ||
+          (d2.game <= d1["Warriors"] && d2.game >= d1["Bulls"])) {
+          svg.append("line")
+            .attr("x1", function(d) { return x(d1.game);})
+            .attr("y1", function(d) { return y(d2.game);})
+            .attr("x2", function(d) { return x(d1.game + 1);})
+            .attr("y2", function(d) { return y(d2.game);})
+            .attr("stroke-width", 1)
+            .attr("stroke", "gray");
+      }
+      }
+    });
+  });
+
+/*
+  svg.append("path")
+      .attr("class", "lineBulls")
+      .attr("d", lineGames);
+*/
+/*
+  svg.append("path")
+      .attr("class", "lineBulls")
+      .attr("d", lineBulls);
+
+  svg.append("path")
+      .attr("class", "lineWarriors")
+      .attr("d", lineWarriors);
+*/
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis)
+      .append("text")
+      .attr("x", x(data[26].game))
+      .attr("y", 35)
+      .text("Games Played");
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      //.attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Games won  .");
+
+/*
+   svg.append("line")
+    .attr("x1", function(d) { return x(1);})
+    .attr("y1", function(d) { return y(0);})
+    .attr("x2", function(d) { return x(1);})
+    .attr("y2", function(d) { return y(47);})
+    .attr("stroke-width", 1)
+    .attr("stroke", "gray");
+
+   svg.append("line")
+    .attr("x1", function(d) { return x(2);})
+    .attr("y1", function(d) { return y(0);})
+    .attr("x2", function(d) { return x(2);})
+    .attr("y2", function(d) { return y(48);})
+    .attr("stroke-width", 1)
+    .attr("stroke", "gray");
+
+*/
+
+   svg.selectAll("dot")
+    .data(data)
+    .enter().append("circle")
+    .filter(function(d, i) { return i!=0 && i!=data.length-1 && d["Bulls"] == data[i-1]["Bulls"] })
+      .style("fill", "rgb(6,25,34)")
+        .attr("r", 3.5)
+        .attr("cx", function(d) { return x(d.game); })
+        .attr("cy", function(d) { return y(d["Bulls"]); });
+
+/*
+   svg.selectAll("dot")
+    .data(data)
+    .enter().append("text")
+    .filter(function(d, i) { return i!=0 && i!=data.length-1 && d["Bulls"] == data[i-1]["Bulls"] })
+        .style("fill", "white")
+        .text(function(d) {return d.game - d["Bulls"];})
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "middle")
+        .style("font-size", "14px")
+        .attr("x", function(d) { return x(d.game); })
+        .attr("y", function(d) { return y(d["Bulls"]); });
+*/
+
+/*
+   svg.selectAll("dot")
+    .data(data)
+    .enter().append("circle")
+    .filter(function(d, i) { return i!=0 && i!=data.length-1&& d["Bulls"] == data[i-1]["Bulls"] })
+      .style("fill", "rgb(6,25,34)")
+        .attr("r", 3.5)
+        .attr("cx", function(d) { return x(d.game); })
+        .attr("cy", function(d) { return height; });
+*/
+
+   svg.selectAll("dot")
+    .data(data)
+    .enter().append("text")
+    .filter(function(d, i) { return i!=0 && i!=data.length-1&& d["Bulls"] == data[i-1]["Bulls"] })
+        .style("fill", "rgb(6,25,34)")
+        .style("font-size", "12px")
+        .text(function(d) {return d.game - d["Bulls"];})
+        //.attr("dy", ".35em")
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "middle")
+        .attr("x", function(d) { return x(d.game); })
+        .attr("y", function(d) { return height + 7; });
+
+   svg.selectAll("dot")
+    .data(data)
+    .enter().append("circle")
+    .filter(function(d, i) { return i!=0 && i!=data.length-1&& d["Bulls"] > data[i-1]["Bulls"] })
+      .style("fill", "rgb(206,17,65)")
+        .attr("r", 3.5)
+        .attr("cx", function(d) { return x(d.game); })
+        .attr("cy", function(d) { return height + 7; });
+
+   svg.selectAll("dot")
+    .data(data)
+    .enter().append("text")
+    .filter(function(d, i) { return i!=0 && i!=data.length-1&& d["Warriors"] == data[i-1]["Warriors"] })
+        .style("fill", "rgb(0,107,182)")
+        .style("font-size", "12px")
+        .text(function(d) {return d.game - d["Warriors"];})
+        //.attr("dy", ".35em")
+        .attr("text-anchor", "middle")
+        .attr("dominant-baseline", "middle")
+        .attr("x", function(d) { return x(d.game); })
+        .attr("y", function(d) { return height + 17; });
+
+   svg.selectAll("dot")
+    .data(data)
+    .enter().append("circle")
+    .filter(function(d, i) { return i!=0 && i!=data.length-1&& d["Warriors"] > data[i-1]["Warriors"] })
+      .style("fill", "rgb(253,185,39)")
+        .attr("r", 3.5)
+        .attr("cx", function(d) { return x(d.game); })
+        .attr("cy", function(d) { return height + 17; });
+
+   svg.selectAll("dot")
+    .data(data)
+    .enter().append("circle")
+    .filter(function(d, i) { return i!=0 && i!=data.length-1&& d["Warriors"] == data[i-1]["Warriors"] })
+      .style("fill", "rgb(0,107,182)")
+        .attr("r", 3.5)
+        .attr("cx", function(d) { return x(d.game); })
+        .attr("cy", function(d) { return y(d["Warriors"]); });
+
+
+   svg.append("rect")
+     .attr("x", -65)
+     .attr("y", function(d) {return y(data[data.length-1]["Warriors"]);})
+     .attr("width", x(1) - x(0))
+     .attr("height", height - y(data[data.length-1]["Warriors"]))
+     .style("fill", "rgb(253,185,39)");
+
+   svg.append("rect")
+     .attr("x", -45)
+     .attr("y", function(d) {return y(data[data.length-1]["Bulls"]);})
+     .attr("width", x(1) - x(0))
+     .attr("height", height - y(data[data.length-1]["Bulls"]))
+     .style("fill", "rgb(206,17,65)");
+
+   svg.selectAll("dot2")
+    .data(data)
+    .enter().append("line")
+    .filter(function(d, i) { return i!=0 && i!=data.length-1 && d["Bulls"] == data[i-1]["Bulls"] })
+            .attr("x1", function(d) { return -45;})
+            .attr("y1", function(d) { return y(d["Bulls"]);})
+            .attr("x2", function(d) { return -45 + x(1) - x(0);})
+            .attr("y2", function(d) { return y(d["Bulls"]);})
+            .attr("stroke-width", 2)
+            .attr("stroke", "rgb(6,25,34)");
+
+   svg.selectAll("dot2")
+    .data(data)
+    .enter().append("line")
+    .filter(function(d, i) { return i!=0 && i!=data.length-1 && d["Warriors"] == data[i-1]["Warriors"] })
+            .attr("x1", function(d) { return -65;})
+            .attr("y1", function(d) { return y(d["Warriors"]);})
+            .attr("x2", function(d) { return -65 + x(1) - x(0);})
+            .attr("y2", function(d) { return y(d["Warriors"]);})
+            .attr("stroke-width", 2)
+            .attr("stroke", "rgb(0,107,182)");
+
+    svg.append('image')
+      .attr('xlink:href', 'gsw.png')
+      .attr("x", '10')
+      .attr('height', '120')
+      .attr('width', '120');
+
+    svg.append('image')
+      .attr('xlink:href', 'bulls.png')
+      .attr("x", '140')
+      .attr('height', '100')
+      .attr('width', '100');
+
+
+});
+
+
+</script>
+</body>
+</html>
