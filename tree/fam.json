@@ -1968,7 +1968,57 @@
                         "day": 26,
                         "location_city": "Manitowoc",
                         "location_state": "Wisconsin"
-                      }
+                      },
+                      "parents": [
+                        {
+                          "id": "n114",
+                          "name": {
+                            "first": "John",
+                            "last": "Schuette",
+                            "suffix": "Sr."
+                          },
+                          "male": true,
+                          "birth": {
+                            "month": 9,
+                            "day": 11,
+                            "year": 1788,
+                            "lat": 52.5167,
+                            "lon": -13.3833,
+                            "location_state": "Germany"
+                          },
+                          "death": {
+                            "month": 1,
+                            "day": 10,
+                            "year": 1862,
+                            "location_city": "Manitowoc",
+                            "location_state": "Wisconsin"
+                          }
+                        },
+                        {
+                          "id": "n115",
+                          "name": {
+                            "first": "Catharine",
+                            "maiden": "Schade",
+                            "last": "Schuette"
+                          },
+                          "male": false,
+                          "birth": {
+                            "month": 5,
+                            "day": 23,
+                            "year": 1811,
+                            "lat": 52.5167,
+                            "lon": -13.3833,
+                            "location_state": "Germany"
+                          },
+                          "death": {
+                            "month": 1,
+                            "day": 5,
+                            "year": 1899,
+                            "location_city": "Manitowoc",
+                            "location_state": "Wisconsin"
+                          }
+                        }
+                      ]
                     }
                   ]
                 },

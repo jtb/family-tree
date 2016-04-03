@@ -270,5 +270,21 @@
     "caption": "Greenwood Cemetery, Arcata, Humboldt County, California",
     "source": "http://www.findagrave.com/cgi-bin/fg.cgi?page=gr&GRid=72193669"
   }
+},
+{
+  "ids": ["n114"],
+  "content": {
+    "url": "JohnSchuette.jpg",
+    "caption": "Evergreen Cemetery, Manitowoc, Wisconsin",
+    "source": "http://www.findagrave.com/cgi-bin/fg.cgi?page=gr&GRid=54848588"
+  }
+},
+{
+  "ids": ["n115"],
+  "content": {
+    "url": "CatharineSchuette.jpg",
+    "caption": "Evergreen Cemetery, Manitowoc, Wisconsin",
+    "source": "http://www.findagrave.com/cgi-bin/fg.cgi?page=gr&GRid=54848560"
+  }
 }
 ]

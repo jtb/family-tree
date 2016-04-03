@@ -1,6 +1,6 @@
 #!/bin/bash
-for i in tombstones/*.jpg
+for i in tombstones/processed/*.jpg
 do
-echo "Prcoessing image $i ..."
+echo "Processing image $i ..."
 convert -thumbnail x150 $i tombstonethumbs/$(basename $i)
 done
