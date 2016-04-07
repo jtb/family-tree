@@ -365,6 +365,14 @@
 {
   "ids": ["n5"],
   "content": {
+    "url": "MarjorieDirks1939.png",
+    "caption": "Marjorie, 1939 Univ. of Nebraska Cornhusker Yearbook",
+    "source": "http://yearbooks.unl.edu/yearbook.php?year=1939,440#page/246/mode/2up"
+  }
+},
+{
+  "ids": ["n5"],
+  "content": {
     "url": "Marj1957.jpg",
     "caption": "Marjorie, 1957",
     "source": "Family Photos"
