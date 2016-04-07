@@ -1471,7 +1471,11 @@
                 "location_state": "Kentucky"
               },
               "death": {
-                "year": 1979
+                "month": 3,
+                "day": 19,
+                "year": 1984,
+                "location_city": "Peoria",
+                "location_state": "Illinois"
               },
               "parents_marriage": {
                 "year": 1884,

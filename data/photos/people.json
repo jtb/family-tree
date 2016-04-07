@@ -24,6 +24,13 @@
     "source": "https://familysearch.org/photos/images/9264468"
   }
 }, {
+  "ids": ["n12"],
+  "content": {
+    "url": "merton1913Arbutus.png",
+    "caption": "Merton Walker in the 1913 Indiana University Arbutus yearbook. Shown in the Alpha Chi Sigma chemistry fraternity, Junior.",
+    "source": "https://archive.org/stream/arbutus_1913indi#page/177/mode/1up/search/Merton"
+  }
+}, {
   "ids": ["n24", "n25"],
   "content": {
     "url": "IraAndSarah.jpg",
