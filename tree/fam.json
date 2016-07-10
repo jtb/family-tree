@@ -1172,6 +1172,10 @@
                             "month": 6,
                             "day": 9
                           },
+                          "parents_marriage": {
+                            "year": 1814,
+                            "location_state": "Pennsylvania"
+                          },
                           "parents": [
                             {
                               "id": "n204",
@@ -1193,7 +1197,7 @@
                                 "year": 1863,
                                 "month": 6,
                                 "day": 10,
-                                "location_city": "Greene",
+                                "location_city": "Greene County",
                                 "location_state": "Indiana"
                               },
                               "parents": [
@@ -1243,13 +1247,17 @@
                               },
                               "male": false,
                               "birth": {
-                                "year": 1794,
-                                "lat": 52.5167,
-                                "lon": -13.3833,
-                                "location_state": "Germany"
+                                "year": 1797,
+                                "lat": 41.2033,
+                                "lon": 77.1945,
+                                "location_state": "Pennsylvania"
                               },
                               "death": {
-                                "year": 1849
+                                "year": 1849,
+                                "month": 8,
+                                "day": 10,
+                                "location_city": "Greene County",
+                                "location_state": "Indiana"
                               }
                             }
                           ]

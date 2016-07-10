@@ -95,6 +95,22 @@
   }
 },
 {
+  "ids": ["n204"],
+  "content": {
+    "url": "FredrickNeldon.jpg",
+    "caption": "Smith-Bethel Cemetery, Greene County, Indiana",
+    "source": "http://www.findagrave.com/cgi-bin/fg.cgi?page=gr&GRid=35712683"
+  }
+},
+{
+  "ids": ["n205"],
+  "content": {
+    "url": "CatharineNeldon.jpg",
+    "caption": "Smith-Bethel Cemetery, Greene County, Indiana",
+    "source": "http://www.findagrave.com/cgi-bin/fg.cgi?page=gr&GRid=16828263"
+  }
+},
+{
   "ids": ["n105"],
   "content": {
     "url": "IsabellaSmith.jpg",
