@@ -1123,7 +1123,7 @@
                       "id": "n51",
                       "name": {
                         "first": "Margaret",
-                        "middle": "C",
+                        "middle": "Catherine",
                         "last": "Haines",
                         "maiden": "Neldon"
                       },
@@ -1510,6 +1510,13 @@
                     "location_city": "Grants Lick",
                     "location_state": "Kentucky"
                   },
+                  "death": {
+                    "month": 11,
+                    "day": 12,
+                    "year": 1940,
+                    "location_city": "Indianapolis",
+                    "location_state": "Indiana"
+                  },
                   "parents_marriage": {
                     "year": 1856,
                     "month": 9,
@@ -1791,6 +1798,11 @@
                     "lon": 84.4903,
                     "location_city": "Newport",
                     "location_state": "Kentucky"
+                  },
+                  "death": {
+                    "year": 1921,
+                    "location_city": "Indianapolis",
+                    "location_state": "Indiana"
                   },
                   "parents": [
                     {

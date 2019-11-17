@@ -31,6 +31,30 @@
   }
 },
 {
+  "ids": ["n26"],
+  "content": {
+    "url": "DEdwinSmith.jpg",
+    "caption": "Crown Hill Cemetery, Indianapolis, IN. Plot Sec: 56, Lot: 293",
+    "source": "https://www.findagrave.com/memorial/46025500/d_-edwin-smith"
+  }
+},
+{
+  "ids": ["n27"],
+  "content": {
+    "url": "MargaretSmith.jpg",
+    "caption": "Crown Hill Cemetery, Indianapolis, IN. Plot Sec: 56, Lot: 293",
+    "source": "https://www.findagrave.com/memorial/46027616/margaret-m_-smith"
+  }
+},
+{
+  "ids": ["n26", "n27"],
+  "content": {
+    "url": "DEandMargaretSmith.jpg",
+    "caption": "Crown Hill Cemetery, Indianapolis, IN. Plot Sec: 56, Lot: 293",
+    "source": "https://www.findagrave.com/memorial/46025500/d_-edwin-smith"
+  }
+},
+{
   "ids": ["n48"],
   "content": {
     "url": "RichardGWalker.jpg",
@@ -84,6 +108,14 @@
     "url": "DanielTColvin.jpg",
     "caption": "Pleasant Ridge Baptist Church Cemetery",
     "source": "http://www.findagrave.com/cgi-bin/fg.cgi?page=gr&GRid=6611433"
+  }
+},
+{
+  "ids": ["n50", "n51"],
+  "content": {
+    "url": "SamuelAndMargaretHaines.jpg",
+    "caption": "Grandview Cemetery, Bloomfield, Greene County, Indiana",
+    "source": "https://www.findagrave.com/memorial/11822143/samuel-haines"
   }
 },
 {
