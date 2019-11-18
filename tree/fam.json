@@ -2446,7 +2446,58 @@
                         "year": 1924,
                         "month": 12,
                         "day": 18
-                      }
+                      },
+                      "parents": [
+                        {
+                          "id": "n68",
+                          "name": {
+                            "first": "Uriah",
+                            "last": "Humphreys"
+                          },
+                          "male": true,
+                          "birth": {
+                            "year": 1794,
+                            "month": 8,
+                            "day": 11,
+                            "lat": 37.8393,
+                            "lon": 84.27,
+                            "location_state": "Kentucky"
+                          },
+                          "death": {
+                            "year": 1842,
+                            "month": 11,
+                            "day": 24,
+                            "location_city": "Sullivan County",
+                            "location_state": "Missouri"
+                          }
+                        },
+                        {
+                          "id": "n69",
+                          "name": {
+                            "first": "Rachel",
+                            "middle": "Ann",
+                            "last": "Humphreys",
+                            "maiden": "Gordon"
+                          },
+                          "male": false,
+                          "birth": {
+                            "year": 1796,
+                            "month": 3,
+                            "day": 25,
+                            "lat": 34.6708,
+                            "lon": 81.1196,
+                            "location_city": "Chester County",
+                            "location_state": "South Carolina"
+                          },
+                          "death": {
+                            "year": 1876,
+                            "month": 5,
+                            "day": 23,
+                            "location_city": "Linn County",
+                            "location_state": "Missouri"
+                          }
+                        }
+                      ]
                     },
                     {
                       "id": "n35",
@@ -2466,7 +2517,58 @@
                         "year": 1925,
                         "month": 2,
                         "day": 25
-                      }
+                      },
+                      "parents": [
+                        {
+                          "id": "n70",
+                          "name": {
+                            "first": "Thomas",
+                            "last": "Dobbins"
+                          },
+                          "male": true,
+                          "birth": {
+                            "year": 1815,
+                            "month": 3,
+                            "day": 18,
+                            "lat": 38.39,
+                            "lon": 88.4016,
+                            "location_city": "Wayne County",
+                            "location_state": "Illinois"
+                          },
+                          "death": {
+                            "year": 1896,
+                            "month": 5,
+                            "day": 21,
+                            "location_city": "Sullivan County",
+                            "location_state": "Missouri"
+                          }
+                        },
+                        {
+                          "id": "n71",
+                          "name": {
+                            "first": "Sarah",
+                            "last": "Dobbins",
+                            "maiden": "Kirkpatrick"
+                          },
+                          "male": false,
+                          "birth": {
+                            "year": 1818,
+                            "month": 1,
+                            "day": 18,
+                            "lat": 38.9030,
+                            "lon": 89.4742,
+                            "location_city": "Bond County",
+                            "location_state": "Illinois"
+                          },
+                          "death": {
+                            "year": 1891,
+                            "month": 2,
+                            "day": 25,
+                            "location_city": "Sullivan County",
+                            "location_state": "Missouri"
+                          }
+                        }
+                      ]
                     }
                   ]
                 }

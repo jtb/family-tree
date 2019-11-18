@@ -30,7 +30,6 @@
     "caption": "Merton Walker in the 1913 Indiana University Arbutus yearbook. Shown in the Alpha Chi Sigma chemistry fraternity, Junior.",
     "source": "https://archive.org/stream/arbutus_1913indi#page/177/mode/1up/search/Merton"
   }
-
 }, {
   "ids": ["n12", "n24", "n25", "n50", "n51"],
   "content": {
@@ -38,7 +37,6 @@
     "caption": "Haines Family about 1904",
     "source": "https://www.familysearch.org/photos/artifacts/40226437"
   }
-
 }, {
   "ids": ["n24", "n25"],
   "content": {
@@ -529,6 +527,22 @@
     "url": "MaryADobbinsPortrait.jpg",
     "caption": "Mother of Minnie Humphrey. William C.'s Great Grandmother.",
     "source": "Family Photos"
+  }
+},
+{
+  "ids": ["n70"],
+  "content": {
+    "url": "ThomasDobbins.jpg",
+    "caption": "Thomas Dobbins born Wayne Co., Il.",
+    "source": "https://www.findagrave.com/memorial/10558902/thomas-dobbins"
+  }
+},
+{
+  "ids": ["n71"],
+  "content": {
+    "url": "SarahDobbins.jpg",
+    "caption": "Sara (Kirkpatrick) Dobbins, Born Bond Co., Il., d/o John Kirkpatrick.",
+    "source": "https://www.findagrave.com/memorial/10558901/sarah-dobbins"
   }
 },
 {
