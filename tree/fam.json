@@ -2447,6 +2447,13 @@
                         "month": 12,
                         "day": 18
                       },
+                      "parents_marriage": {
+                        "year": 1815,
+                        "month": 5,
+                        "day": 25,
+                        "location_city": "Gibson County",
+                        "location_state": "Indiana"
+                      },
                       "parents": [
                         {
                           "id": "n68",
@@ -2459,8 +2466,9 @@
                             "year": 1794,
                             "month": 8,
                             "day": 11,
-                            "lat": 37.8393,
-                            "lon": 84.27,
+                            "lat": 37.295,
+                            "lon": 87.128611,
+                            "location_city": "Muhlenberg County",
                             "location_state": "Kentucky"
                           },
                           "death": {
