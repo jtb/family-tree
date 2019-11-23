@@ -1935,6 +1935,7 @@
                       "id": "n56",
                       "name": {
                         "first": "Eugene",
+                        "middle": "Otto Constantin",
                         "last": "Alter"
                       },
                       "male": true,
@@ -1957,13 +1958,15 @@
                           "id": "n113",
                           "name": {
                             "first": "Caroline",
-                            "last": "Von Alter"
+                            "last": "Von Alter",
+                            "maiden": "Von Kutzleben"
                           },
                           "male": false,
                           "birth": {
                             "year": 1795,
-                            "lat": 52.5167,
-                            "lon": -13.3833,
+                            "lat": 51.1093,
+                            "lon": -10.6445,
+                            "location_city": "Langensalza"
                             "location_state": "Germany"
                           }
                         }
