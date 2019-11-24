@@ -73,6 +73,15 @@ function fullName(d) {
   return full_name;
 }
 
+function fullSiblingName(d) {
+  var full_name = d.name.first + " ";
+  if (d.name.middle) full_name += d.name.middle + " ";
+  if (d.name.maiden) full_name += "(" + d.name.maiden + ") ";
+  full_name += d.name.last;
+  if (d.name.suffix) full_name += ", " + d.name.suffix;
+  return full_name;
+}
+
 function fullNameAndNumber(d) {
   var full_name = "<sup>" + d.id + "</sup> " + d.name.first + " ";
   if (d.name.middle) full_name += d.name.middle + " ";
@@ -82,7 +91,7 @@ function fullNameAndNumber(d) {
   return full_name;
 }
 
-//Print birth year and location, if present.                                                                          
+//Print birth year and location, if present.
     var printBirth = function(d) {
 	var ans = "";
 	if (d.birth && d.birth.year) {
@@ -98,7 +107,7 @@ var printMarriage = function(d) {
     // console.log(d);
     var ans = "";
     if (d.parent && d.parent.parents_marriage && d.parent.parents_marriage.year) {
-	ans += "m. " + d.parent.parents_marriage.year; 
+	ans += "m. " + d.parent.parents_marriage.year;
 
 	if (d.parent.parents_marriage.location_state) {
 	    ans += " in " + d.parent.parents_marriage.location_state;

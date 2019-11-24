@@ -91,7 +91,7 @@ function addSiblings(d) {
 
     p.enter()
       .append('li')
-      .text(function(d) {return fullName(d) + " " + stats(d)});
+      .text(function(d) {return fullSiblingName(d) + " " + stats(d)});
 
     p.exit()
       .remove();
