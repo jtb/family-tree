@@ -1953,7 +1953,32 @@
                         "location_city": "Manitowoc",
                         "location_state": "Wisconsin"
                       },
+                      "parents_marriage": {
+                        "year": 1819
+                      },
                       "parents": [
+                        {
+                          "id": "n112",
+                          "name": {
+                            "first": "Carl",
+                            "middle": "August",
+                            "last": "Alter"
+                          },
+                          "male": true,
+                          "birth": {
+                            "year": 1790,
+                            "lat": 50.3569,
+                            "lon": -7.5890,
+                            "location_city": "Coblenz, Saxony",
+                            "location_state": "Germany"
+                          },
+                          "death": {
+                            "year": 1847,
+                            "month": 12,
+                            "location_city": "Coblenz, Saxony",
+                            "location_state": "Germany"
+                          }
+                        },
                         {
                           "id": "n113",
                           "name": {
@@ -1968,6 +1993,13 @@
                             "lon": -10.6445,
                             "location_city": "Langensalza",
                             "location_state": "Germany"
+                          },
+                          "death": {
+                            "year": 1870,
+                            "month": 4,
+                            "day": 21,
+                            "location_city": "Manitowoc",
+                            "location_state": "Wisconsin"
                           }
                         }
                       ]

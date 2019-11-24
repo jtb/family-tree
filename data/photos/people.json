@@ -145,6 +145,14 @@
   }
 },
 {
+  "ids": ["n112"],
+  "content": {
+    "url": "KnightsCross.jpg",
+    "caption": "Example of the Knight's Cross, Military Order of St. Henry",
+    "source": "https://en.wikipedia.org/wiki/Military_Order_of_St._Henry"
+  }
+},
+{
   "ids": ["n22"],
   "content": {
     "url": "JohnPohlman.jpg",
