@@ -1872,6 +1872,16 @@
             "lon": 89.5,
             "location_state": "Wisconsin"
           },
+          "siblings": [
+            {
+              "id": "n0s0",
+              "name": {
+                "first": "Only",
+                "last": "Child"
+              },
+              "male": true
+            }
+          ],
           "parents": [
             {
               "id": "n14",
@@ -1897,6 +1907,16 @@
                 "location_city": "Geneva, Walworth County",
                 "location_state": "Wisconsin"
               },
+              "siblings": [
+                {
+                  "id": "n14s1",
+                  "name": {
+                    "first": "Erwin",
+                    "last": "Alter"
+                  },
+                  "male": true
+                }
+              ],
               "parents_marriage": {
                 "year": 1884,
                 "month": 5,
@@ -1927,6 +1947,41 @@
                     "location_city": "Manitowoc",
                     "location_state": "Wisconsin"
                   },
+                  "siblings": [
+                    {
+                      "id": "n28s1",
+                      "name": {
+                        "first": "Gustav",
+                        "middle": "E",
+                        "last": "Alter"
+                      },
+                      "male": true,
+                      "birth": {
+                        "year": 1863
+                      },
+                      "death": {
+                        "year": 1936,
+                        "month": 1,
+                        "day": 27
+                      }
+                    },
+                    {
+                      "id": "n28s2",
+                      "name": {
+                        "first": "Otto",
+                        "middle": "W",
+                        "last": "Alter"
+                      },
+                      "male": true,
+                      "birth": {
+                        "year": 1859
+                      },
+                      "death": {
+                        "year": 1935,
+                        "month": 5
+                      }
+                    }
+                  ],
                   "parents_marriage": {
                     "year": 1858
                   },
@@ -2283,7 +2338,12 @@
             "middle": "M.",
             "last": "Brown"
           },
-          "male": true
+          "male": true,
+          "birth": {
+            "year": 1958,
+            "month": 1,
+            "day": 14
+          }
         }
       ],
       "parents_marriage": {
@@ -2318,6 +2378,16 @@
             "location_state": "Nebraska"
           },
           "male": true,
+          "siblings": [
+            {
+              "id": "n0s0",
+              "name": {
+                "first": "Only",
+                "last": "Child"
+              },
+              "male": true
+            }
+          ],
           "parents_marriage": {
             "year": 1914,
             "month": 10,
@@ -2330,7 +2400,7 @@
               "id": "n8",
               "name": {
                 "first": "Charles",
-                "middle": "Emory",
+                "middle": "Emery",
                 "last": "Brown"
               },
               "male": true,
@@ -2348,6 +2418,16 @@
                 "month": 10,
                 "day": 10
               },
+              "siblings": [
+                {
+                  "id": "n0s0",
+                  "name": {
+                    "first": "Only",
+                    "last": "Child"
+                  },
+                  "male": true
+                }
+              ],
               "parents_marriage": {
                 "year": 1894,
                 "month": 9,
@@ -2380,6 +2460,41 @@
                     "location_city": "Rocky Ford",
                     "location_state": "Colorado"
                   },
+                  "siblings": [
+                    {
+                      "id": "n16s1",
+                      "name": {
+                        "first": "Edgar",
+                        "middle": "Carr",
+                        "last": "Brown"
+                      },
+                      "male": true,
+                      "birth": {
+                        "year": 1872,
+                        "month": 11,
+                        "day": 29
+                      },
+                      "death": {
+                        "year": 1927,
+                        "month": 2,
+                        "day": 9
+                      }
+                    },
+                    {
+                      "id": "n16s2",
+                      "name": {
+                        "first": "Mort",
+                        "middle": "Griffin",
+                        "last": "Brown"
+                      },
+                      "male": true,
+                      "birth": {
+                        "year": 1874,
+                        "month": 9,
+                        "day": 29
+                      }
+                    }
+                  ],
                   "parents_marriage": {
                     "year": 1869,
                     "month": 10,
