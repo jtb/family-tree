@@ -2524,7 +2524,84 @@
                         "day": 22,
                         "location_city": "Bedford",
                         "location_state": "Missouri"
-                      }
+                      },
+                      "siblings": [
+                        {
+                          "id": "n32s1",
+                          "name": {
+                            "first": "Mary",
+                            "middle": "Louisa",
+                            "last": "Doyle",
+                            "maiden": "Brown"
+                          },
+                          "male": false
+                        },
+                        {
+                          "id": "n32s2",
+                          "name": {
+                            "first": "John",
+                            "middle": "T",
+                            "last": "Brown"
+                          },
+                          "male": true
+                        },
+                        {
+                          "id": "n32s3",
+                          "name": {
+                            "first": "Kemp",
+                            "middle": "S",
+                            "last": "Brown"
+                          },
+                          "male": true
+                        }
+                      ],
+                      "parents": [
+                        {
+                          "id": "n64",
+                          "name": {
+                            "first": "William",
+                            "middle": "L",
+                            "last": "Brown"
+                          },
+                          "male": true,
+                          "birth": {
+                            "year": 1819,
+                            "month": 2,
+                            "day": 7,
+                            "location_state": "Missouri"
+                          },
+                          "death": {
+                            "year": 1875,
+                            "month": 4,
+                            "day": 16,
+                            "location_city": "Bedford",
+                            "location_state": "Missouri"
+                          }
+                        },
+                        {
+                          "id": "n65",
+                          "name": {
+                            "first": "Martha",
+                            "middle": "Ann Catherine",
+                            "last": "Brown",
+                            "maiden": "Silvey"
+                          },
+                          "male": false,
+                          "birth": {
+                            "year": 1818,
+                            "month": 12,
+                            "day": 20,
+                            "location_state": "Missouri"
+                          },
+                          "death": {
+                            "year": 1888,
+                            "month": 7,
+                            "day": 24,
+                            "location_city": "Bedford",
+                            "location_state": "Missouri"
+                          }
+                        }
+                      ]
                     },
                     {
                       "id": "n33",
@@ -2538,13 +2615,59 @@
                       "birth": {
                         "year": 1842,
                         "month": 4,
-                        "day": 11
+                        "day": 11,
+                        "location_city": "Springfield",
+                        "location_state": "West Virginia"
                       },
                       "death": {
                         "year": 1915,
                         "month": 6,
-                        "day": 23
-                      }
+                        "day": 23,
+                        "location_city": "Milan, Sullivan",
+                        "location_state": "Missouri"
+                      },
+                      "parents": [
+                        {
+                          "id": "n66",
+                          "name": {
+                            "first": "Jacob",
+                            "last": "Grace"
+                          },
+                          "male": true,
+                          "birth": {
+                            "year": 1798,
+                            "location_state": "Virginia"
+                          },
+                          "death": {
+                            "year": 1862,
+                            "month": 3,
+                            "day": 8,
+                            "location_city": "Springfield",
+                            "location_state": "West Virginia"
+                          }
+                        },
+                        {
+                          "id": "n67",
+                          "name": {
+                            "first": "Barbara",
+                            "middle": "E",
+                            "last": "Grace",
+                            "maiden": "Wheeler"
+                          },
+                          "male": false,
+                          "birth": {
+                            "year": 1813,
+                            "location_state": "Maryland"
+                          },
+                          "death": {
+                            "year": 1851,
+                            "month": 8,
+                            "day": 17,
+                            "location_city": "Springfield",
+                            "location_state": "West Virginia"
+                          }
+                        }
+                      ]
                     }
                   ]
                 },

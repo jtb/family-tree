@@ -247,6 +247,46 @@
   }
 },
 {
+  "ids": ["n32"],
+  "content": {
+    "url": "BraxtonBrown.jpg",
+    "caption": "Bedford Cemetery, Bedford, Livingston County, Missouri",
+    "source": "https://www.findagrave.com/memorial/50322214/braxton-c_-brown"
+  }
+},
+{
+  "ids": ["n33"],
+  "content": {
+    "url": "AmeliaBrown.jpg",
+    "caption": "Bedford Cemetery, Bedford, Livingston County, Missouri",
+    "source": "https://www.findagrave.com/memorial/50322299/amelia-e_-brown"
+  }
+},
+{
+  "ids": ["n33"],
+  "content": {
+    "url": "GraceCertificate.jpg",
+    "caption": "Death Certificate for Amelia E. (Grace) Brown",
+    "source": "https://www.sos.mo.gov/images/archives/deathcerts/1915/1915_00021067.PDF"
+  }
+},
+{
+  "ids": ["n66"],
+  "content": {
+    "url": "JacobGrace.jpg",
+    "caption": "Springfield Hill Cemetery, Springfield, Hampshire County, West Virginia",
+    "source": "https://www.findagrave.com/memorial/94649839/jacob-grace"
+  }
+},
+{
+  "ids": ["n67"],
+  "content": {
+    "url": "BarbaraGrace.jpg",
+    "caption": "Springfield Hill Cemetery, Springfield, Hampshire County, West Virginia",
+    "source": "https://www.findagrave.com/memorial/94649911/barbara-e-grace"
+  }
+},
+{
   "ids": ["n34"],
   "content": {
     "url": "ElishaHumphreys.jpg",
