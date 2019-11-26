@@ -38,6 +38,13 @@
     "source": "https://archive.org/stream/arbutus_1913indi#page/165/mode/1up/search/Merton"
   }
 }, {
+  "ids": ["n12"],
+  "content": {
+    "url": "MertonSrArbutusSenior.png",
+    "caption": "Merton Walker in the 1914 Indiana University Arbutus yearbook (Senior).",
+    "source": "https://archive.org/stream/arbutus_1914indi#page/82/mode/2up/search/Merton"
+  }
+}, {
   "ids": ["n12", "n24", "n25", "n50", "n51"],
   "content": {
     "url": "HainesFamily.jpg",
