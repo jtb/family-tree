@@ -31,6 +31,13 @@
     "source": "https://archive.org/stream/arbutus_1913indi#page/177/mode/1up/search/Merton"
   }
 }, {
+  "ids": ["n12"],
+  "content": {
+    "url": "ChemicalSocietyArbutus1913.jpg",
+    "caption": "Merton Walker in the 1913 Indiana University Arbutus yearbook. Chemical Society (Back row, 5th from left).",
+    "source": "https://archive.org/stream/arbutus_1913indi#page/165/mode/1up/search/Merton"
+  }
+}, {
   "ids": ["n12", "n24", "n25", "n50", "n51"],
   "content": {
     "url": "HainesFamily.jpg",
