@@ -207,6 +207,14 @@
   }
 },
 {
+  "ids": ["n30"],
+  "content": {
+    "url": "SilasVanNostrand.jpg",
+    "caption": "Pioneers Rest Cemetery, Two Rivers, Manitowoc County, Wisconsin, Plot 3-72",
+    "source": "https://www.findagrave.com/memorial/195160515/silas-s_-van_nostrand"
+  }
+},
+{
   "ids": ["n113"],
   "content": {
     "url": "CarolineVonAlter.jpg",
