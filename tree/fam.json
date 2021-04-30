@@ -2946,7 +2946,9 @@
                         "lon": 8.2967
                       },
                       "death": {
-                        "year": 1933
+                        "year": 1933,
+                        "location_city": "Ellis",
+                        "location_state": "Kansas"
                       }
                     }
                   ]
