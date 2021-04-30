@@ -2916,12 +2916,14 @@
                       },
                       "male": true,
                       "birth": {
+                        "year": 1842,
                         "lat": 51.5072,
                         "lon": -0.1275,
                         "location_city": "London",
                         "location_state": "England"
                       },
                       "death": {
+                        "year": 1878,
                         "location_city": "Ellis",
                         "location_state": "Kansas"
                       }
